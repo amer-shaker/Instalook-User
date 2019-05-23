@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB59F2296DD9C003A08F6 /* Salon.swift */; };
+		CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */; };
+		CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D47C2296D9A10035471C /* AppDelegate.swift */; };
+		CC83D4822296D9A10035471C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4802296D9A10035471C /* Main.storyboard */; };
+		CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */; };
+		CC83D4872296D9A10035471C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4862296D9A10035471C /* Assets.xcassets */; };
+		CC83D48A2296D9A10035471C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4882296D9A10035471C /* LaunchScreen.storyboard */; };
+		CC83D4952296D9A10035471C /* Instalook_UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4942296D9A10035471C /* Instalook_UserTests.swift */; };
+		CC83D4A02296D9A10035471C /* Instalook_UserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC83D4912296D9A10035471C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC83D4712296D9A00035471C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC83D4782296D9A00035471C;
+			remoteInfo = "Instalook-User";
+		};
+		CC83D49C2296D9A10035471C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC83D4712296D9A00035471C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC83D4782296D9A00035471C;
+			remoteInfo = "Instalook-User";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC1DB59F2296DD9C003A08F6 /* Salon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
+		CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSalonsTableViewController.swift; sourceTree = "<group>"; };
+		CC83D4792296D9A00035471C /* Instalook-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instalook-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC83D47C2296D9A10035471C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC83D4812296D9A10035471C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC83D4842296D9A10035471C /* Instalook_User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Instalook_User.xcdatamodel; sourceTree = "<group>"; };
+		CC83D4862296D9A10035471C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC83D4892296D9A10035471C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC83D48B2296D9A10035471C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC83D4902296D9A10035471C /* Instalook-UserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instalook-UserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC83D4942296D9A10035471C /* Instalook_UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instalook_UserTests.swift; sourceTree = "<group>"; };
+		CC83D4962296D9A10035471C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC83D49B2296D9A10035471C /* Instalook-UserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instalook-UserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instalook_UserUITests.swift; sourceTree = "<group>"; };
+		CC83D4A12296D9A10035471C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC83D4762296D9A00035471C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D48D2296D9A10035471C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D4982296D9A10035471C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC1DB5962296DB4E003A08F6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D4802296D9A10035471C /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CC1DB5972296DB5E003A08F6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D48B2296D9A10035471C /* Info.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		CC1DB5982296DB71003A08F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D4862296D9A10035471C /* Assets.xcassets */,
+				CC83D4882296D9A10035471C /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CC1DB5992296DB8E003A08F6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D47C2296D9A10035471C /* AppDelegate.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		CC1DB59A2296DBAE003A08F6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DB59E2296DC8F003A08F6 /* Search Salon */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		CC1DB59B2296DBC9003A08F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DB59F2296DD9C003A08F6 /* Salon.swift */,
+				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC1DB59C2296DC6A003A08F6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC1DB59D2296DC78003A08F6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC1DB59E2296DC8F003A08F6 /* Search Salon */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */,
+				CC1DB59D2296DC78003A08F6 /* Presenter */,
+				CC1DB59C2296DC6A003A08F6 /* Interactor */,
+			);
+			name = "Search Salon";
+			sourceTree = "<group>";
+		};
+		CC83D4702296D9A00035471C = {
+			isa = PBXGroup;
+			children = (
+				CC83D47B2296D9A00035471C /* Instalook-User */,
+				CC83D4932296D9A10035471C /* Instalook-UserTests */,
+				CC83D49E2296D9A10035471C /* Instalook-UserUITests */,
+				CC83D47A2296D9A00035471C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC83D47A2296D9A00035471C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D4792296D9A00035471C /* Instalook-User.app */,
+				CC83D4902296D9A10035471C /* Instalook-UserTests.xctest */,
+				CC83D49B2296D9A10035471C /* Instalook-UserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC83D47B2296D9A00035471C /* Instalook-User */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DB5972296DB5E003A08F6 /* Configuration */,
+				CC1DB5992296DB8E003A08F6 /* Core */,
+				CC1DB5982296DB71003A08F6 /* Resources */,
+				CC1DB5962296DB4E003A08F6 /* Storyboards */,
+				CC1DB59B2296DBC9003A08F6 /* Model */,
+				CC1DB59A2296DBAE003A08F6 /* Scenes */,
+			);
+			path = "Instalook-User";
+			sourceTree = "<group>";
+		};
+		CC83D4932296D9A10035471C /* Instalook-UserTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D4942296D9A10035471C /* Instalook_UserTests.swift */,
+				CC83D4962296D9A10035471C /* Info.plist */,
+			);
+			path = "Instalook-UserTests";
+			sourceTree = "<group>";
+		};
+		CC83D49E2296D9A10035471C /* Instalook-UserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */,
+				CC83D4A12296D9A10035471C /* Info.plist */,
+			);
+			path = "Instalook-UserUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC83D4782296D9A00035471C /* Instalook-User */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC83D4A42296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-User" */;
+			buildPhases = (
+				CC83D4752296D9A00035471C /* Sources */,
+				CC83D4762296D9A00035471C /* Frameworks */,
+				CC83D4772296D9A00035471C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Instalook-User";
+			productName = "Instalook-User";
+			productReference = CC83D4792296D9A00035471C /* Instalook-User.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC83D48F2296D9A10035471C /* Instalook-UserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC83D4A72296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-UserTests" */;
+			buildPhases = (
+				CC83D48C2296D9A10035471C /* Sources */,
+				CC83D48D2296D9A10035471C /* Frameworks */,
+				CC83D48E2296D9A10035471C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC83D4922296D9A10035471C /* PBXTargetDependency */,
+			);
+			name = "Instalook-UserTests";
+			productName = "Instalook-UserTests";
+			productReference = CC83D4902296D9A10035471C /* Instalook-UserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC83D49A2296D9A10035471C /* Instalook-UserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC83D4AA2296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-UserUITests" */;
+			buildPhases = (
+				CC83D4972296D9A10035471C /* Sources */,
+				CC83D4982296D9A10035471C /* Frameworks */,
+				CC83D4992296D9A10035471C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC83D49D2296D9A10035471C /* PBXTargetDependency */,
+			);
+			name = "Instalook-UserUITests";
+			productName = "Instalook-UserUITests";
+			productReference = CC83D49B2296D9A10035471C /* Instalook-UserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC83D4712296D9A00035471C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Instalook;
+				TargetAttributes = {
+					CC83D4782296D9A00035471C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					CC83D48F2296D9A10035471C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC83D4782296D9A00035471C;
+					};
+					CC83D49A2296D9A10035471C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC83D4782296D9A00035471C;
+					};
+				};
+			};
+			buildConfigurationList = CC83D4742296D9A00035471C /* Build configuration list for PBXProject "Instalook-User" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC83D4702296D9A00035471C;
+			productRefGroup = CC83D47A2296D9A00035471C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC83D4782296D9A00035471C /* Instalook-User */,
+				CC83D48F2296D9A10035471C /* Instalook-UserTests */,
+				CC83D49A2296D9A10035471C /* Instalook-UserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC83D4772296D9A00035471C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC83D48A2296D9A10035471C /* LaunchScreen.storyboard in Resources */,
+				CC83D4872296D9A10035471C /* Assets.xcassets in Resources */,
+				CC83D4822296D9A10035471C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D48E2296D9A10035471C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D4992296D9A10035471C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC83D4752296D9A00035471C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
+				CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */,
+				CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */,
+				CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D48C2296D9A10035471C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC83D4952296D9A10035471C /* Instalook_UserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC83D4972296D9A10035471C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC83D4A02296D9A10035471C /* Instalook_UserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC83D4922296D9A10035471C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC83D4782296D9A00035471C /* Instalook-User */;
+			targetProxy = CC83D4912296D9A10035471C /* PBXContainerItemProxy */;
+		};
+		CC83D49D2296D9A10035471C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC83D4782296D9A00035471C /* Instalook-User */;
+			targetProxy = CC83D49C2296D9A10035471C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC83D4802296D9A10035471C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC83D4812296D9A10035471C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC83D4882296D9A10035471C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC83D4892296D9A10035471C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC83D4A22296D9A10035471C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC83D4A32296D9A10035471C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC83D4A52296D9A10035471C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Instalook-User/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CC83D4A62296D9A10035471C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Instalook-User/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CC83D4A82296D9A10035471C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Instalook-UserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instalook.Instalook-UserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instalook-User.app/Instalook-User";
+			};
+			name = Debug;
+		};
+		CC83D4A92296D9A10035471C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Instalook-UserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instalook.Instalook-UserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instalook-User.app/Instalook-User";
+			};
+			name = Release;
+		};
+		CC83D4AB2296D9A10035471C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Instalook-UserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instalook.Instalook-UserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Instalook-User";
+			};
+			name = Debug;
+		};
+		CC83D4AC2296D9A10035471C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Instalook-UserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.instalook.Instalook-UserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Instalook-User";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC83D4742296D9A00035471C /* Build configuration list for PBXProject "Instalook-User" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC83D4A22296D9A10035471C /* Debug */,
+				CC83D4A32296D9A10035471C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC83D4A42296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-User" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC83D4A52296D9A10035471C /* Debug */,
+				CC83D4A62296D9A10035471C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC83D4A72296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-UserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC83D4A82296D9A10035471C /* Debug */,
+				CC83D4A92296D9A10035471C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC83D4AA2296D9A10035471C /* Build configuration list for PBXNativeTarget "Instalook-UserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC83D4AB2296D9A10035471C /* Debug */,
+				CC83D4AC2296D9A10035471C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC83D4842296D9A10035471C /* Instalook_User.xcdatamodel */,
+			);
+			currentVersion = CC83D4842296D9A10035471C /* Instalook_User.xcdatamodel */;
+			path = Instalook_User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CC83D4712296D9A00035471C /* Project object */;
+}
