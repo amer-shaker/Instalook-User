@@ -1,0 +1,6 @@
+framework module Pods_Instalook_User {
+  umbrella header "Pods-Instalook-User-umbrella.h"
+
+  export *
+  module * { export * }
+}
