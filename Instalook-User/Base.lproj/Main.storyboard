@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wwq-ot-7hs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Salons Table View Controller-->
+        <!--Item-->
         <scene sceneID="njW-d7-XJc">
             <objects>
                 <tableViewController id="0dm-FJ-TRM" customClass="SearchSalonsTableViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="ND5-Kb-y0u">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saloncell" rowHeight="118" id="ND5-Kb-y0u">
                                 <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ND5-Kb-y0u" id="HXd-SF-mmj">
@@ -76,10 +76,40 @@
                             <outlet property="delegate" destination="0dm-FJ-TRM" id="MZy-cZ-Y3h"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="NsF-wE-rrb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfs-nZ-PUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183.19999999999999" y="81.409295352323838"/>
+            <point key="canvasLocation" x="745" y="29"/>
+        </scene>
+        <!--UserProfileScenario-->
+        <scene sceneID="VWL-ki-GUU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfileScenario" id="rDo-Rd-Pak" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wIS-ab-uYs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldE-FS-2I9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="497"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="apI-Ml-PS4">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wwq-ot-7hs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="B6F-JK-8Ak">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0dm-FJ-TRM" kind="relationship" relationship="viewControllers" id="GwH-v0-0Td"/>
+                        <segue destination="rDo-Rd-Pak" kind="relationship" relationship="viewControllers" id="DTO-8a-CrN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmO-BJ-R0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="238"/>
         </scene>
     </scenes>
 </document>

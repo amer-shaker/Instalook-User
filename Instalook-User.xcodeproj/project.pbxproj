@@ -11,6 +11,12 @@
 		4E47E44E06F1994682019492 /* Pods_Instalook_User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5181B6A9D998E00477A258 /* Pods_Instalook_User.framework */; };
 		CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB59F2296DD9C003A08F6 /* Salon.swift */; };
 		CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */; };
+		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
+		CC4E9B2B229ADB2E004AB0B4 /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */; };
+		CC4E9B2C229ADB2E004AB0B4 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */; };
+		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
+		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
+		CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6152D8229B2E5A00A230A1 /* Util.swift */; };
 		CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D47C2296D9A10035471C /* AppDelegate.swift */; };
 		CC83D4822296D9A10035471C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4802296D9A10035471C /* Main.storyboard */; };
 		CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */; };
@@ -50,6 +56,12 @@
 		A88B4EB68FEC3E45B37DCEEF /* Pods-Instalook-UserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserUITests.release.xcconfig"; path = "Target Support Files/Pods-Instalook-UserUITests/Pods-Instalook-UserUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC1DB59F2296DD9C003A08F6 /* Salon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
 		CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSalonsTableViewController.swift; sourceTree = "<group>"; };
+		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
+		CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
+		CC6152D8229B2E5A00A230A1 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CC83D4792296D9A00035471C /* Instalook-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instalook-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC83D47C2296D9A10035471C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC83D4812296D9A10035471C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +115,6 @@
 				7991DC003B8236B5D1887CD9 /* Pods-Instalook-UserUITests.debug.xcconfig */,
 				A88B4EB68FEC3E45B37DCEEF /* Pods-Instalook-UserUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -120,6 +131,7 @@
 		CC1DB5962296DB4E003A08F6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */,
 				CC83D4802296D9A10035471C /* Main.storyboard */,
 			);
 			name = Storyboards;
@@ -153,6 +165,7 @@
 		CC1DB59A2296DBAE003A08F6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC4E9B1D229AD35C004AB0B4 /* User Profile */,
 				CC1DB59E2296DC8F003A08F6 /* Search Salon */,
 			);
 			name = Scenes;
@@ -191,6 +204,49 @@
 			name = "Search Salon";
 			sourceTree = "<group>";
 		};
+		CC4E9B1D229AD35C004AB0B4 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E9B20229AD3C1004AB0B4 /* Interactor */,
+				CC4E9B1F229AD3AC004AB0B4 /* Presenter */,
+				CC4E9B1E229AD396004AB0B4 /* Controller */,
+			);
+			name = "User Profile";
+			sourceTree = "<group>";
+		};
+		CC4E9B1E229AD396004AB0B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */,
+				CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */,
+				CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */,
+				CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CC4E9B1F229AD3AC004AB0B4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		CC4E9B20229AD3C1004AB0B4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC6152D7229B2E2F00A230A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC6152D8229B2E5A00A230A1 /* Util.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		CC83D4702296D9A00035471C = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +272,7 @@
 		CC83D47B2296D9A00035471C /* Instalook-User */ = {
 			isa = PBXGroup;
 			children = (
+				CC6152D7229B2E2F00A230A1 /* Utils */,
 				CC1DB5972296DB5E003A08F6 /* Configuration */,
 				CC1DB5992296DB8E003A08F6 /* Core */,
 				CC1DB5982296DB71003A08F6 /* Resources */,
@@ -356,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC83D48A2296D9A10035471C /* LaunchScreen.storyboard in Resources */,
+				CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */,
 				CC83D4872296D9A10035471C /* Assets.xcassets in Resources */,
 				CC83D4822296D9A10035471C /* Main.storyboard in Resources */,
 			);
@@ -383,15 +441,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Instalook-UserTests-checkManifestLockResult.txt",
 			);
@@ -405,15 +459,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Instalook-UserUITests-checkManifestLockResult.txt",
 			);
@@ -427,15 +477,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Instalook-User-checkManifestLockResult.txt",
 			);
@@ -449,8 +495,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Instalook-User/Pods-Instalook-User-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -460,8 +504,6 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
@@ -481,8 +523,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4E9B2C229ADB2E004AB0B4 /* PostsViewController.swift in Sources */,
+				CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */,
+				CC4E9B2B229ADB2E004AB0B4 /* PointsViewController.swift in Sources */,
 				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
 				CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */,
+				CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */,
+				CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */,
 				CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */,
 				CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */,
 			);
@@ -520,6 +567,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC4E9B26229AD94C004AB0B4 /* Base */,
+			);
+			name = UserProfileScenario.storyboard;
+			sourceTree = "<group>";
+		};
 		CC83D4802296D9A10035471C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
