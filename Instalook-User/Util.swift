@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 class Util{
     
-    public static func customizeProfileImage(borderImage: CGFloat,cornerRedius:CGFloat, imageView:UIImageView)-> UIImageView
+    public static func customizeProfileImage(borderImage: CGFloat,cornerRedius:CGFloat, imageView:UIView)-> UIView
     {
         imageView.layer.borderWidth = borderImage;
         imageView.layer.cornerRadius = cornerRedius;

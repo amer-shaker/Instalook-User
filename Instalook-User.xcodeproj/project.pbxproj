@@ -12,10 +12,17 @@
 		CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB59F2296DD9C003A08F6 /* Salon.swift */; };
 		CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */; };
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
-		CC4E9B2B229ADB2E004AB0B4 /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */; };
-		CC4E9B2C229ADB2E004AB0B4 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */; };
 		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
 		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
+		CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */; };
+		CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566441229E9E0B00678EC4 /* ReservationCell.swift */; };
+		CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566445229EDFAD00678EC4 /* PointsTVController.swift */; };
+		CC566448229EE16E00678EC4 /* PointsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566447229EE16D00678EC4 /* PointsCell.swift */; };
+		CC56644A229EE7A400678EC4 /* FollowedSalonsTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566449229EE7A400678EC4 /* FollowedSalonsTV.swift */; };
+		CC56644C229EE89000678EC4 /* FollowedSalonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644B229EE89000678EC4 /* FollowedSalonCell.swift */; };
+		CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */; };
+		CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644F229F48B600678EC4 /* PostCellWithImage.swift */; };
+		CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */; };
 		CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6152D8229B2E5A00A230A1 /* Util.swift */; };
 		CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D47C2296D9A10035471C /* AppDelegate.swift */; };
 		CC83D4822296D9A10035471C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4802296D9A10035471C /* Main.storyboard */; };
@@ -57,10 +64,17 @@
 		CC1DB59F2296DD9C003A08F6 /* Salon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
 		CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSalonsTableViewController.swift; sourceTree = "<group>"; };
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
-		CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
-		CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
+		CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTVController.swift; sourceTree = "<group>"; };
+		CC566441229E9E0B00678EC4 /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
+		CC566445229EDFAD00678EC4 /* PointsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTVController.swift; sourceTree = "<group>"; };
+		CC566447229EE16D00678EC4 /* PointsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsCell.swift; sourceTree = "<group>"; };
+		CC566449229EE7A400678EC4 /* FollowedSalonsTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowedSalonsTV.swift; sourceTree = "<group>"; };
+		CC56644B229EE89000678EC4 /* FollowedSalonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowedSalonCell.swift; sourceTree = "<group>"; };
+		CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPostsTVController.swift; sourceTree = "<group>"; };
+		CC56644F229F48B600678EC4 /* PostCellWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithImage.swift; sourceTree = "<group>"; };
+		CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithoutImage.swift; sourceTree = "<group>"; };
 		CC6152D8229B2E5A00A230A1 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CC83D4792296D9A00035471C /* Instalook-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instalook-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC83D47C2296D9A10035471C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,10 +231,13 @@
 		CC4E9B1E229AD396004AB0B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC4E9B28229ADB2E004AB0B4 /* PointsViewController.swift */,
-				CC4E9B29229ADB2E004AB0B4 /* PostsViewController.swift */,
+				CC56643E229E9D5E00678EC4 /* CellControllers */,
 				CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */,
 				CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */,
+				CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */,
+				CC566445229EDFAD00678EC4 /* PointsTVController.swift */,
+				CC566449229EE7A400678EC4 /* FollowedSalonsTV.swift */,
+				CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -237,6 +254,18 @@
 			children = (
 			);
 			name = Interactor;
+			sourceTree = "<group>";
+		};
+		CC56643E229E9D5E00678EC4 /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC566441229E9E0B00678EC4 /* ReservationCell.swift */,
+				CC566447229EE16D00678EC4 /* PointsCell.swift */,
+				CC56644B229EE89000678EC4 /* FollowedSalonCell.swift */,
+				CC56644F229F48B600678EC4 /* PostCellWithImage.swift */,
+				CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */,
+			);
+			name = CellControllers;
 			sourceTree = "<group>";
 		};
 		CC6152D7229B2E2F00A230A1 /* Utils */ = {
@@ -523,12 +552,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC4E9B2C229ADB2E004AB0B4 /* PostsViewController.swift in Sources */,
+				CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */,
 				CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */,
-				CC4E9B2B229ADB2E004AB0B4 /* PointsViewController.swift in Sources */,
+				CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */,
 				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
+				CC56644A229EE7A400678EC4 /* FollowedSalonsTV.swift in Sources */,
 				CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */,
+				CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */,
+				CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */,
+				CC566448229EE16E00678EC4 /* PointsCell.swift in Sources */,
 				CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */,
+				CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */,
+				CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */,
+				CC56644C229EE89000678EC4 /* FollowedSalonCell.swift in Sources */,
 				CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */,
 				CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */,
 				CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */,

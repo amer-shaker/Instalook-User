@@ -11,23 +11,33 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     
-    @IBOutlet weak var pointsView: UIView!
+    @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var userImage: UIImageView!
-    var pointsController:PointsViewController!
-    var postsController:PostsViewController!
-    override func viewDidLoad() {
+    var reservatinTV:ReservationsTVController!
+    var pointTV: PointsTVController!
+    var followTV: FollowedSalonsTV!
+    var savedPostTV:SavedPostsTVController!
+       override func viewDidLoad() {
         super.viewDidLoad()
         
-       userImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage)
+       userImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView
         // intial of Two View controller
-        pointsController = self.storyboard?.instantiateViewController(withIdentifier: "points") as! PointsViewController;
-        postsController = self.storyboard?.instantiateViewController(withIdentifier: "posts") as! PostsViewController;
+        reservatinTV = self.storyboard?.instantiateViewController(withIdentifier: "ReservationTVC") as! ReservationsTVController;
+    pointTV = self.storyboard?.instantiateViewController(withIdentifier: "PointsTVController") as! PointsTVController
+        followTV = self.storyboard?.instantiateViewController(withIdentifier: "FollowingTVController") as! FollowedSalonsTV
+        savedPostTV = self.storyboard?.instantiateViewController(withIdentifier: "SavedPostTVController") as! SavedPostsTVController
         
-        //********
+        
+                //********
         
         // add views to segmentView
-        pointsView.addSubview(pointsController.view)
-        pointsView.addSubview(postsController.view)
+        profileView.addSubview(savedPostTV.view)
+        profileView.addSubview(pointTV.view)
+        profileView.addSubview(followTV.view)
+        
+        profileView.addSubview(reservatinTV.view)
+        
+       
         //****
 
         
@@ -38,14 +48,20 @@ class ProfileViewController: UIViewController {
     @IBAction func swichProfileUserViews(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            pointsView.bringSubview(toFront: pointsController.view)
+            profileView.bringSubview(toFront: reservatinTV.view)
             print("hellookmlkmnlk")
             break
         case 1:
-            pointsView.bringSubview(toFront: postsController.view)
+           profileView.bringSubview(toFront:followTV.view)
+            print("hellookmlkmnlk")
+        case 2:
+            profileView.bringSubview(toFront:pointTV.view)
+            print("hellookmlkmnlk")
+        case 3:
+           profileView.bringSubview(toFront: savedPostTV.view)
             print("hellookmlkmnlk")
         default:
-            pointsView.bringSubview(toFront: postsController.view)
+            profileView.bringSubview(toFront: reservatinTV.view)
             
         }
     }
