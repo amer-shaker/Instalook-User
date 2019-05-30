@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cosmos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -46,47 +51,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>18A6AA30FBD7D573E68C7E76D3E97262</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3383968E74B5371B20BB519B170DC7FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4434F2563C32FF13A1C1D9DCEF91839D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5F678D83845FBF223B24376EC294A87E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>64A5B0D84D8579CF3E24DF2C12D99B08</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6C352BB524B56B76C3C6C4F0125FA903</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>90EFCA7DC21F68D93071B287B6651553</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AD41A27735C97592518645AC29BCB577</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
