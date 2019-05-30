@@ -7,6 +7,7 @@ target 'Instalook-User' do
   
   # Pods for Instalook-User
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
   pod 'ObjectMapper', '~> 2.2.8'
   pod 'PromiseKit', '~> 4.4'
   pod 'SDWebImage'
