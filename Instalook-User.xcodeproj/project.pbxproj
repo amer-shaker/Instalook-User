@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34BA123A719E96E71120AE69 /* Pods_Instalook_UserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178033869AA0CDF318088F0A /* Pods_Instalook_UserTests.framework */; };
 		4E47E44E06F1994682019492 /* Pods_Instalook_User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5181B6A9D998E00477A258 /* Pods_Instalook_User.framework */; };
+		CC197DB422A0846D00C6249A /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC197DB322A0846D00C6249A /* Authentication.storyboard */; };
 		CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB59F2296DD9C003A08F6 /* Salon.swift */; };
 		CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */; };
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
@@ -61,6 +62,7 @@
 		78243ED0B31469AE6F65F4DA /* Pods-Instalook-UserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserTests.release.xcconfig"; path = "Target Support Files/Pods-Instalook-UserTests/Pods-Instalook-UserTests.release.xcconfig"; sourceTree = "<group>"; };
 		7991DC003B8236B5D1887CD9 /* Pods-Instalook-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-Instalook-UserUITests/Pods-Instalook-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A88B4EB68FEC3E45B37DCEEF /* Pods-Instalook-UserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserUITests.release.xcconfig"; path = "Target Support Files/Pods-Instalook-UserUITests/Pods-Instalook-UserUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC197DB322A0846D00C6249A /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Authentication.storyboard; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		CC1DB59F2296DD9C003A08F6 /* Salon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
 		CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSalonsTableViewController.swift; sourceTree = "<group>"; };
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		CC1DB5962296DB4E003A08F6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				CC197DB322A0846D00C6249A /* Authentication.storyboard */,
 				CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */,
 				CC83D4802296D9A10035471C /* Main.storyboard */,
 			);
@@ -445,6 +448,7 @@
 				CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */,
 				CC83D4872296D9A10035471C /* Assets.xcassets in Resources */,
 				CC83D4822296D9A10035471C /* Main.storyboard in Resources */,
+				CC197DB422A0846D00C6249A /* Authentication.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
