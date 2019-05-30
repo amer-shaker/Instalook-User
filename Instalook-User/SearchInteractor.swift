@@ -11,6 +11,6 @@ import Foundation
 class SearchInteractor {
     
     func searchSalons() {
-        
+         
     }
 }
