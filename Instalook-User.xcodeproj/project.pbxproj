@@ -15,6 +15,7 @@
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
 		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
 		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
+		CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */; };
 		CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */; };
 		CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566441229E9E0B00678EC4 /* ReservationCell.swift */; };
 		CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566445229EDFAD00678EC4 /* PointsTVController.swift */; };
@@ -85,6 +86,7 @@
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
 		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
+		CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationPresenter.swift; sourceTree = "<group>"; };
 		CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTVController.swift; sourceTree = "<group>"; };
 		CC566441229E9E0B00678EC4 /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
 		CC566445229EDFAD00678EC4 /* PointsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTVController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 		CC4E9B1F229AD3AC004AB0B4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Instalook-User/Pods-Instalook-User-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
@@ -622,6 +626,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
@@ -652,6 +657,7 @@
 				CCCF48EC22A0981D0037934D /* LoginView.swift in Sources */,
 				CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */,
 				CCCF48FC22A09A980037934D /* SearchView.swift in Sources */,
+				CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */,
 				CCCF48F422A098530037934D /* LoginInteractor.swift in Sources */,
 				CCCF48E822A097F80037934D /* LoginViewController.swift in Sources */,
 				CCCF48F622A098630037934D /* RegistrationInteractor.swift in Sources */,

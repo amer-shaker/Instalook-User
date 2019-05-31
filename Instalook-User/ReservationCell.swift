@@ -19,6 +19,11 @@ class ReservationCell: UITableViewCell {
         
         // Initialization code
     }
+    override func prepareForReuse() {
+        timeOrTurnLabel =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: timeOrTurnLabel.frame.height/2,imageView: timeOrTurnLabel) as! UILabel
+
+        
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

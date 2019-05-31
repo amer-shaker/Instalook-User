@@ -18,6 +18,9 @@ class PostCellWithImage: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    func prepareForReuse() {
+        
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

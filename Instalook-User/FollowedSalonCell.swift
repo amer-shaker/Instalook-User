@@ -17,6 +17,10 @@ class FollowedSalonCell: UITableViewCell {
         salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
         // Initialization code
     }
+    func prepareForReuse() {
+        salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
+        
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
