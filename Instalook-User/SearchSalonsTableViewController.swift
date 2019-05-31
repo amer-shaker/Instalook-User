@@ -51,7 +51,7 @@ class SearchSalonsTableViewController: UITableViewController, SearchView {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! SalonCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SalonTableViewCell", for: indexPath) as! SalonCellTableViewCell
         cell.salonName.text = dumyNameArray[indexPath.row]
         cell.salonAddress.text = dumyAddressArray[indexPath.row]
         // presenter.showname(cell: cell, index: indexPath.row)

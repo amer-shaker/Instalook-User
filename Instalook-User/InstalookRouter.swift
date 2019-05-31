@@ -96,9 +96,13 @@ enum InstalookRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
-        urlRequest.httpBody =
+        urlRequest.httpBody = jsonData
         
-        return try JSONEncoding.default.encode(urlRequest)
-        //return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        switch self {
+        case .login, .search:
+                return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        case .register:
+            return try JSONEncoding.default.encode(urlRequest)
+        }
     }
 }

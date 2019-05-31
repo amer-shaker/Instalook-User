@@ -15,7 +15,6 @@ class LoginInteractor {
     func login(email: String,
                password: String,
                completionHandler: @escaping (_ user: User?) -> Void) {
-        
         Alamofire.request(InstalookRouter.login(email: email, password: password))
             .responseObject { (response: DataResponse<User>) in
                 
@@ -28,7 +27,10 @@ class LoginInteractor {
                 if let request = response.request {
                     print("Response Request: \(request)")
                     print("Response Request HTTP method: \(request.httpMethod!)")
-                    print("Response Request HTTP method: \(request.value(forHTTPHeaderField: NetworkingConstants.contentType)!)")
+                    
+                    if let header = request.value(forHTTPHeaderField: NetworkingConstants.contentType) {
+                        print("Response Request HTTP method: \(header)")
+                    }
                 } else {
                     print("Response Request: nil")
                 }

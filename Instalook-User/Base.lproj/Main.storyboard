@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saloncell" rowHeight="118" id="ND5-Kb-y0u">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SalonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="saloncell" rowHeight="118" id="ND5-Kb-y0u" customClass="SalonCellTableViewCell" customModule="Instalook_User" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ND5-Kb-y0u" id="HXd-SF-mmj">
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="638" y="497"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home View Controller-->
         <scene sceneID="apI-Ml-PS4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wwq-ot-7hs" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="wwq-ot-7hs" customClass="HomeViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="B6F-JK-8Ak">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

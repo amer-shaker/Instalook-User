@@ -10,6 +10,8 @@ import Foundation
 
 protocol LoginView: class {
     
+    func showAlert()
+    
     func successfullLogin()
     
     func failedLogin()

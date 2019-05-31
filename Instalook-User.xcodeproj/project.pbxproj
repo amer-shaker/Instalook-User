@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		34BA123A719E96E71120AE69 /* Pods_Instalook_UserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178033869AA0CDF318088F0A /* Pods_Instalook_UserTests.framework */; };
 		4E47E44E06F1994682019492 /* Pods_Instalook_User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5181B6A9D998E00477A258 /* Pods_Instalook_User.framework */; };
+		CC1CA09122A027C40041FD0F /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CA09022A027C40041FD0F /* Points.swift */; };
 		CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB59F2296DD9C003A08F6 /* Salon.swift */; };
 		CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */; };
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
 		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
 		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
+		CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F49D622A1819900676E62 /* HomeViewController.swift */; };
 		CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */; };
 		CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566441229E9E0B00678EC4 /* ReservationCell.swift */; };
 		CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566445229EDFAD00678EC4 /* PointsTVController.swift */; };
@@ -78,11 +80,13 @@
 		78243ED0B31469AE6F65F4DA /* Pods-Instalook-UserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserTests.release.xcconfig"; path = "Target Support Files/Pods-Instalook-UserTests/Pods-Instalook-UserTests.release.xcconfig"; sourceTree = "<group>"; };
 		7991DC003B8236B5D1887CD9 /* Pods-Instalook-UserUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserUITests.debug.xcconfig"; path = "Target Support Files/Pods-Instalook-UserUITests/Pods-Instalook-UserUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A88B4EB68FEC3E45B37DCEEF /* Pods-Instalook-UserUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instalook-UserUITests.release.xcconfig"; path = "Target Support Files/Pods-Instalook-UserUITests/Pods-Instalook-UserUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC1CA09022A027C40041FD0F /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		CC1DB59F2296DD9C003A08F6 /* Salon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
 		CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSalonsTableViewController.swift; sourceTree = "<group>"; };
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
 		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
+		CC4F49D622A1819900676E62 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTVController.swift; sourceTree = "<group>"; };
 		CC566441229E9E0B00678EC4 /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
 		CC566445229EDFAD00678EC4 /* PointsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTVController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		CC1DB59A2296DBAE003A08F6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC4F49D622A1819900676E62 /* HomeViewController.swift */,
 				CCCF48E422A097990037934D /* Authentication */,
 				CC1DB59E2296DC8F003A08F6 /* Search Salon */,
 				CC4E9B1D229AD35C004AB0B4 /* User Profile */,
@@ -226,6 +231,7 @@
 			children = (
 				CCCF48E222A096E30037934D /* User.swift */,
 				CC1DB59F2296DD9C003A08F6 /* Salon.swift */,
+				CC1CA09022A027C40041FD0F /* Points.swift */,
 				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
 			);
 			name = Model;
@@ -641,6 +647,7 @@
 				CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */,
 				CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */,
 				CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */,
+				CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */,
 				CCCF48EE22A0982A0037934D /* LoginPresenter.swift in Sources */,
 				CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */,
 				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
@@ -666,6 +673,7 @@
 				CC56644C229EE89000678EC4 /* FollowedSalonCell.swift in Sources */,
 				CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */,
 				CCCF48F222A098470037934D /* RegistrationPresenter.swift in Sources */,
+				CC1CA09122A027C40041FD0F /* Points.swift in Sources */,
 				CC1DB5A02296DD9C003A08F6 /* Salon.swift in Sources */,
 				CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */,
 				CCCF48FA22A09A560037934D /* SearchPreseneter.swift in Sources */,
@@ -828,6 +836,7 @@
 			baseConfigurationReference = 241341F9A567D668CB438047 /* Pods-Instalook-User.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Instalook-User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;
@@ -841,6 +850,7 @@
 			baseConfigurationReference = 2287170C49B3FB2EFC5B8547 /* Pods-Instalook-User.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Instalook-User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;

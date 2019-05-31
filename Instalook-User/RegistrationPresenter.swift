@@ -13,13 +13,11 @@ class RegistrationPresenter {
     private weak var view: RegistrationView?
     private var user: User
     private var registrationInteractor: RegistrationInteractor
-    private var validation: Validation
     
     init(view: RegistrationView) {
         self.view = view
         user = User()
         registrationInteractor = RegistrationInteractor()
-        validation = Validation()
     }
     
     func register(firstName: String,
@@ -44,7 +42,7 @@ class RegistrationPresenter {
     }
 }
 
-class Validation {
+extension RegistrationPresenter {
     
     // MARK: Validation methods
     private func isValidEmailAddress(email: String) -> Bool {
