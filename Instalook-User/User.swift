@@ -21,15 +21,15 @@ class User: Mappable {
         
     }
     
-    required init?(map: Map) {
+    required init(map: Map) {
         
     }
     
     func mapping(map: Map) {
-        userId <- map["userId"]
-        firstName <- map["firstName"]
-        lastName <- map["lastName"]
-        email <- map["email"]
-        password <- map["password"]
+        userId <- map[NetworkingConstants.userId]
+        firstName <- map[NetworkingConstants.firstName]
+        lastName <- map[NetworkingConstants.lastName]
+        email <- map[NetworkingConstants.email]
+        password <- map[NetworkingConstants.password]
     }
 }

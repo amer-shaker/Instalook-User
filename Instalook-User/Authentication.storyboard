@@ -31,9 +31,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HS4-Sa-b7X">
                                 <rect key="frame" x="32" y="184" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -43,9 +44,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVr-SH-bkz">
                                 <rect key="frame" x="32" y="222" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -55,9 +57,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nW-Gm-I0G">
                                 <rect key="frame" x="32" y="260" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -67,9 +70,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-lb-QCR">
                                 <rect key="frame" x="32" y="298" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -79,9 +83,10 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-nh-iMu">
                                 <rect key="frame" x="32" y="336" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -130,6 +135,7 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ddv-OL-EMV" appends="YES" id="QTK-Lk-gVq"/>
+                            <outletCollection property="gestureRecognizers" destination="PWM-y3-qi4" appends="YES" id="SDx-s1-N1z"/>
                         </connections>
                     </view>
                     <connections>
@@ -146,6 +152,11 @@
                         <action selector="dismissViewController:" destination="CFg-La-bls" id="RRv-03-uDU"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <tapGestureRecognizer id="PWM-y3-qi4">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="CFg-La-bls" id="RG0-G9-Zwt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="15" y="107"/>
         </scene>
@@ -169,10 +180,11 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-Xw-hHB">
                                 <rect key="frame" x="32" y="216" width="311" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.34509803919999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
@@ -182,15 +194,25 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zzm-r5-Kfj">
                                 <rect key="frame" x="32" y="254" width="311" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Lb-oZU">
+                                <rect key="frame" x="80" y="613" width="216" height="30"/>
+                                <state key="normal" title="Don't have an account? Sign up">
+                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="register:" destination="LMZ-C6-bpc" eventType="touchUpInside" id="R2i-f3-ETD"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jm7-WB-cFf">
                                 <rect key="frame" x="32" y="308" width="311" height="50"/>
                                 <color key="backgroundColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -205,23 +227,19 @@
                                     <action selector="login:" destination="LMZ-C6-bpc" eventType="touchUpInside" id="CqP-rX-VS4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Lb-oZU">
-                                <rect key="frame" x="32" y="613" width="311" height="30"/>
-                                <state key="normal" title="Don't have an account? Sign up">
-                                    <color key="titleColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="register:" destination="LMZ-C6-bpc" eventType="touchUpInside" id="R2i-f3-ETD"/>
-                                </connections>
-                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-7f-yyW">
+                                <rect key="frame" x="177.5" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="m4r-cY-tTa" firstAttribute="leading" secondItem="1t7-HV-azV" secondAttribute="leadingMargin" constant="24" id="0Ip-nW-CuN"/>
                             <constraint firstItem="m4r-cY-tTa" firstAttribute="top" secondItem="kag-KM-Baz" secondAttribute="bottom" constant="64" id="34I-qU-XDi"/>
                             <constraint firstItem="Zzm-r5-Kfj" firstAttribute="top" secondItem="ujc-Xw-hHB" secondAttribute="bottom" constant="8" id="5XT-qE-zmM"/>
                             <constraint firstItem="Zzm-r5-Kfj" firstAttribute="leading" secondItem="ujc-Xw-hHB" secondAttribute="leading" id="9It-5p-f2T"/>
-                            <constraint firstItem="lBo-75-IEg" firstAttribute="top" secondItem="8Ie-Lb-oZU" secondAttribute="bottom" constant="24" id="DgG-yt-b9P"/>
+                            <constraint firstItem="Ubs-7f-yyW" firstAttribute="centerX" secondItem="1t7-HV-azV" secondAttribute="centerX" id="FDO-cb-wDy"/>
+                            <constraint firstItem="lBo-75-IEg" firstAttribute="top" secondItem="8Ie-Lb-oZU" secondAttribute="bottom" constant="24" id="HzC-J3-mPf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m4r-cY-tTa" secondAttribute="trailing" constant="24" id="I40-Vu-BhF"/>
                             <constraint firstItem="Zzm-r5-Kfj" firstAttribute="trailing" secondItem="ujc-Xw-hHB" secondAttribute="trailing" id="RfV-1Z-geo"/>
                             <constraint firstItem="Jm7-WB-cFf" firstAttribute="trailing" secondItem="Zzm-r5-Kfj" secondAttribute="trailing" id="XQf-2L-Xq3"/>
@@ -229,18 +247,27 @@
                             <constraint firstItem="ujc-Xw-hHB" firstAttribute="top" secondItem="m4r-cY-tTa" secondAttribute="bottom" constant="32" id="gis-Mz-VKj"/>
                             <constraint firstItem="Jm7-WB-cFf" firstAttribute="leading" secondItem="Zzm-r5-Kfj" secondAttribute="leading" id="hcp-nE-HkM"/>
                             <constraint firstItem="Jm7-WB-cFf" firstAttribute="top" secondItem="Zzm-r5-Kfj" secondAttribute="bottom" constant="24" id="j8q-vL-d40"/>
-                            <constraint firstItem="8Ie-Lb-oZU" firstAttribute="leading" secondItem="1t7-HV-azV" secondAttribute="leadingMargin" constant="16" id="v06-Cr-PA7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Ie-Lb-oZU" secondAttribute="trailing" constant="16" id="vNI-13-vDo"/>
+                            <constraint firstItem="Ubs-7f-yyW" firstAttribute="centerY" secondItem="1t7-HV-azV" secondAttribute="centerY" id="vQG-Xn-920"/>
+                            <constraint firstItem="8Ie-Lb-oZU" firstAttribute="centerX" secondItem="1t7-HV-azV" secondAttribute="centerX" id="wV0-0m-YdB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ujc-Xw-hHB" secondAttribute="trailing" constant="16" id="zdK-mz-IsW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="321-QV-Rhx" appends="YES" id="pfi-We-wjy"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ujc-Xw-hHB" id="3Nn-Zi-wKy"/>
                         <outlet property="passwordTextField" destination="Zzm-r5-Kfj" id="EZb-eL-BZS"/>
                         <outlet property="registerButton" destination="8Ie-Lb-oZU" id="hmS-Ch-eAe"/>
+                        <outlet property="spinner" destination="Ubs-7f-yyW" id="Qi9-db-K75"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azf-2N-vNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="321-QV-Rhx">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="LMZ-C6-bpc" id="31g-hI-FIP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-692" y="107.49625187406298"/>
         </scene>

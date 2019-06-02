@@ -26,6 +26,13 @@ struct NetworkingConstants {
     static let login = "login"
     static let register = "register"
     
+    // User Query Parameters
+    static let userId = "userId"
+    static let firstName = "firstName"
+    static let lastName = "lastName"
+    static let email = "email"
+    static let password = "password"
+    
     // Salon Requests
     static let getSalons = "getSalons"
     static let getSalonsById = "getSalonsById"

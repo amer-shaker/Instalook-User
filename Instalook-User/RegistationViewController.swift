@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RegistationViewController: UIViewController, RegistrationView {
+class RegistationViewController: UIViewController {
     
     // MARK: Outlets
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -17,55 +17,29 @@ class RegistationViewController: UIViewController, RegistrationView {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
     private var presenter: RegistrationPresenter!
-    private var firstName: String!
-    private var lastName: String!
-    private var email: String!
-    private var password: String!
+
     
     // MARK: View life cycle
     override func viewDidLoad() {
         presenter = RegistrationPresenter(view: self)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    // MARK: Registration View methods
-    func showIndicator() {
-        
-    }
-    
-    func hideIndicator() {
-        
-    }
-    
-    func register() -> Bool {
-        return false
-    }
-    
-    func success() {
-        print("Success")
-    }
-    
-    func failed() {
-        print("FF")
-    }
-    
+
     // MARK: Actions
     @IBAction func register(_ sender: UIButton) {
-        firstName = firstNameTextField.text
-        lastName = lastNameTextField.text
-        email = emailTextField.text
-        password = passwordTextField.text
-        
-        presenter.register(firstName: firstName,
-                           lastName: lastName,
-                           email: email,
-                           password: password,
+        presenter.register(firstName: firstNameTextField.text!,
+                           lastName: lastNameTextField.text!,
+                           email: emailTextField.text!,
+                           password: passwordTextField.text!,
                            confirmPassword: confirmPasswordTextField.text!)
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        confirmPasswordTextField.resignFirstResponder()
     }
     
     @IBAction func dismissViewController(_ sender: UISwipeGestureRecognizer) {

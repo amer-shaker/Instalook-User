@@ -12,12 +12,12 @@ class RegistrationPresenter {
     
     private weak var view: RegistrationView?
     private var user: User
-    private var registrationInteractor: RegistrationInteractor
+    private var userInteractor: UserInteractor
     
     init(view: RegistrationView) {
         self.view = view
         user = User()
-        registrationInteractor = RegistrationInteractor()
+        userInteractor = UserInteractor()
     }
     
     func register(firstName: String,
@@ -32,11 +32,11 @@ class RegistrationPresenter {
         user.email = email
         user.password = password
         
-        registrationInteractor.register(user: user, completionHandler: { result in
-            if result {
-                self.view?.success()
-            } else {
+        userInteractor.register(user: user, completionHandler: { error in
+            if error != nil {
                 self.view?.failed()
+            } else {
+                self.view?.success()
             }
         })
     }
