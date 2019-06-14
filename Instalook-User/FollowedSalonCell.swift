@@ -14,7 +14,7 @@ class FollowedSalonCell: UITableViewCell {
     @IBOutlet weak var salonName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
+        salonImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
         // Initialization code
     }
 

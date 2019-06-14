@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Util {
+class Utils {
     
     public static func customizeProfileImage(borderImage: CGFloat, cornerRedius: CGFloat, imageView:UIView) -> UIView {
         imageView.layer.borderWidth = borderImage

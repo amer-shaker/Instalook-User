@@ -2,7 +2,7 @@
 //  RegistrationPresenter.swift
 //  Instalook-User
 //
-//  Created by jets on 5/31/19.
+//  Created by Amer Shaker on 5/31/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import Foundation
 class RegistrationPresenter {
     
     private weak var view: RegistrationView?
-    private var user: User
-    private var userInteractor: UserInteractor
+    private let userInteractor: UserInteractor
+    private var user: User?
     
     init(view: RegistrationView) {
         self.view = view
@@ -26,34 +26,65 @@ class RegistrationPresenter {
                   password: String,
                   confirmPassword: String) {
         
-        let user = User()
-        user.firstName = firstName
-        user.lastName = lastName
-        user.email = email
-        user.password = password
-        
-        userInteractor.register(user: user, completionHandler: { error in
-            if error != nil {
-                self.view?.failed()
-            } else {
-                self.view?.success()
+        if !isEmpty(string: firstName),
+            !isEmpty(string: lastName),
+            isValidEmailAddress(emailAddressString: email),
+            isValidPassword(password: password),
+            isValidConfrimPassword(password: password, confirmPassword: confirmPassword) {
+            
+            let user = User()
+            user.firstName = firstName
+            user.lastName = lastName
+            user.email = email
+            user.password = password
+            
+            view?.showIndicator()
+            userInteractor.register(user: user) { [unowned self] error in
+                
+                self.view?.hideIndicator()
+                if let error = error {
+                    self.view?.showError(error: error.localizedDescription)
+                } else {
+                    self.view?.registrationSuccess()
+                }
             }
-        })
+        } else {
+            view?.showError(error: "Invalid Credentials")
+        }
     }
-}
-
-extension RegistrationPresenter {
     
     // MARK: Validation methods
-    private func isValidEmailAddress(email: String) -> Bool {
-        return true
+    private func isEmpty(string: String) -> Bool {
+        return string.isEmpty
+    }
+    
+    private func isValidEmailAddress(emailAddressString: String) -> Bool {
+        
+        var returnValue = true
+        let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
+        
+        do {
+            let regex = try NSRegularExpression(pattern: emailRegEx)
+            let nsString = emailAddressString as NSString
+            let results = regex.matches(in: emailAddressString, range: NSRange(location: 0, length: nsString.length))
+            
+            if results.count == 0 {
+                returnValue = false
+            }
+            
+        } catch let error as NSError {
+            print("Invalid regex: \(error.localizedDescription)")
+            returnValue = false
+        }
+        
+        return returnValue
     }
     
     private func isValidPassword(password: String) -> Bool {
-        return true
+        return !(password.isEmpty)
     }
     
     private func isValidConfrimPassword(password: String, confirmPassword: String) -> Bool {
-        return true
+        return password == confirmPassword
     }
 }

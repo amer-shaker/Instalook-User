@@ -2,7 +2,7 @@
 //  LoginPresenter.swift
 //  Instalook-User
 //
-//  Created by jets on 5/31/19.
+//  Created by Amer Shaker on 5/31/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -21,7 +21,8 @@ class LoginPresenter {
     
     func login(email: String, password: String) {
         
-        if isValidEmail(email: email), isValidPassword(password: password) {
+        if isValidEmail(email: email),
+            isValidPassword(password: password) {
             
             view?.showIndicator()
             userInteractor.login(email: email, password: password) { [unowned self] (user, error) in
@@ -36,7 +37,7 @@ class LoginPresenter {
                 }
             }
         } else {
-            view?.showError(error: "Empty Fields")
+            view?.showError(error: "Invalid Credentials")
         }
     }
     

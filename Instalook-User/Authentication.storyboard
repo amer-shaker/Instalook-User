@@ -40,6 +40,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CFg-La-bls" id="ABg-WT-3ip"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVr-SH-bkz">
                                 <rect key="frame" x="32" y="222" width="311" height="30"/>
@@ -53,6 +56,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CFg-La-bls" id="YP4-O3-nki"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2nW-Gm-I0G">
                                 <rect key="frame" x="32" y="260" width="311" height="30"/>
@@ -66,6 +72,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CFg-La-bls" id="7Sf-8e-T2z"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FtH-lb-QCR">
                                 <rect key="frame" x="32" y="298" width="311" height="30"/>
@@ -79,6 +88,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CFg-La-bls" id="ejo-S0-LD2"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bf-nh-iMu">
                                 <rect key="frame" x="32" y="336" width="311" height="30"/>
@@ -92,6 +104,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="CFg-La-bls" id="hA9-Y8-12F"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lna-Ct-WDK">
                                 <rect key="frame" x="32" y="390" width="311" height="50"/>
@@ -107,6 +122,9 @@
                                     <action selector="register:" destination="CFg-La-bls" eventType="touchUpInside" id="mxQ-CI-RTX"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="0FA-ZE-emE">
+                                <rect key="frame" x="178" y="324" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -114,6 +132,7 @@
                             <constraint firstItem="lna-Ct-WDK" firstAttribute="trailing" secondItem="8bf-nh-iMu" secondAttribute="trailing" id="0Ei-Mt-Joh"/>
                             <constraint firstItem="8bf-nh-iMu" firstAttribute="top" secondItem="FtH-lb-QCR" secondAttribute="bottom" constant="8" id="0IY-nh-Ooy"/>
                             <constraint firstItem="HS4-Sa-b7X" firstAttribute="leading" secondItem="Yp4-2g-wib" secondAttribute="leadingMargin" constant="16" id="3kt-V4-HPb"/>
+                            <constraint firstItem="0FA-ZE-emE" firstAttribute="centerY" secondItem="Yp4-2g-wib" secondAttribute="centerY" id="5UJ-5U-ZOy"/>
                             <constraint firstItem="lna-Ct-WDK" firstAttribute="top" secondItem="8bf-nh-iMu" secondAttribute="bottom" constant="24" id="8d0-x0-h2f"/>
                             <constraint firstItem="yWZ-Xc-ZZQ" firstAttribute="top" secondItem="gNr-Ch-Q7k" secondAttribute="bottom" constant="32" id="9ES-KB-NFA"/>
                             <constraint firstItem="KVr-SH-bkz" firstAttribute="trailing" secondItem="HS4-Sa-b7X" secondAttribute="trailing" id="B24-H9-Ulo"/>
@@ -124,6 +143,7 @@
                             <constraint firstItem="HS4-Sa-b7X" firstAttribute="top" secondItem="yWZ-Xc-ZZQ" secondAttribute="bottom" constant="32" id="JfC-U1-syB"/>
                             <constraint firstItem="8bf-nh-iMu" firstAttribute="leading" secondItem="FtH-lb-QCR" secondAttribute="leading" id="MTS-Gm-7tH"/>
                             <constraint firstItem="8bf-nh-iMu" firstAttribute="trailing" secondItem="FtH-lb-QCR" secondAttribute="trailing" id="Mzf-Xk-nGc"/>
+                            <constraint firstItem="0FA-ZE-emE" firstAttribute="centerX" secondItem="Yp4-2g-wib" secondAttribute="centerX" id="NOM-gW-yzX"/>
                             <constraint firstItem="KVr-SH-bkz" firstAttribute="top" secondItem="HS4-Sa-b7X" secondAttribute="bottom" constant="8" id="Omq-ae-ZbU"/>
                             <constraint firstItem="FtH-lb-QCR" firstAttribute="top" secondItem="2nW-Gm-I0G" secondAttribute="bottom" constant="8" id="bCJ-rj-eBN"/>
                             <constraint firstItem="lna-Ct-WDK" firstAttribute="leading" secondItem="8bf-nh-iMu" secondAttribute="leading" id="dyN-7e-aUW"/>
@@ -144,6 +164,7 @@
                         <outlet property="firstNameTextField" destination="HS4-Sa-b7X" id="pTE-6k-WpC"/>
                         <outlet property="lastNameTextField" destination="KVr-SH-bkz" id="aJ8-Bx-4dj"/>
                         <outlet property="passwordTextField" destination="FtH-lb-QCR" id="YCR-vg-P7f"/>
+                        <outlet property="spinner" destination="0FA-ZE-emE" id="C5W-6S-Teg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxa-ja-Oil" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -190,6 +211,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="LMZ-C6-bpc" id="1pG-zW-JSZ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zzm-r5-Kfj">
                                 <rect key="frame" x="32" y="254" width="311" height="30"/>
@@ -203,6 +227,9 @@
                                         <color key="value" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="LMZ-C6-bpc" id="1vN-ec-5am"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Lb-oZU">
                                 <rect key="frame" x="80" y="613" width="216" height="30"/>

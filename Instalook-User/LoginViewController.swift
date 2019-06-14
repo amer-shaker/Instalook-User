@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  Instalook-User
 //
-//  Created by jets on 5/31/19.
+//  Created by Amer Shaker on 5/31/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -26,17 +26,17 @@ class LoginViewController: UIViewController {
     
     // MARK: Action
     @IBAction func login(_ sender: UIButton) {
-        presenter.login(email: emailTextField.text!, password: passwordTextField.text!)
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        presenter.login(email: email, password: password)
     }
     
     @IBAction func register(_ sender: UIButton) {
-        let registationViewController = self.storyboard?.instantiateViewController(withIdentifier: "RegistationViewController") as! RegistationViewController
-        self.present(registationViewController, animated: true, completion: nil)
+        let registationViewController = storyboard?.instantiateViewController(withIdentifier: "RegistationViewController") as! RegistationViewController
+        present(registationViewController, animated: true, completion: nil)
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
+        view.endEditing(true)
     }
     
     private func configureRegisterButton() {
@@ -57,16 +57,5 @@ class LoginViewController: UIViewController {
         title.append(partTwo)
         
         registerButton.setAttributedTitle(title, for: .normal)
-    }
-}
-
-extension UITextField {
-    @IBInspectable var placeHolderColor: UIColor? {
-        get {
-            return self.placeHolderColor
-        }
-        set {
-            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSForegroundColorAttributeName: newValue!])
-        }
     }
 }

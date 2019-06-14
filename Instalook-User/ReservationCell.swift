@@ -15,7 +15,7 @@ class ReservationCell: UITableViewCell {
     @IBOutlet weak var timeOrTurnLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-         timeOrTurnLabel =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: timeOrTurnLabel.frame.height/2,imageView: timeOrTurnLabel) as! UILabel
+         timeOrTurnLabel =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: timeOrTurnLabel.frame.height/2,imageView: timeOrTurnLabel) as! UILabel
         
         // Initialization code
     }

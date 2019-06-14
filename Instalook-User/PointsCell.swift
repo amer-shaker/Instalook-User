@@ -14,7 +14,7 @@ class PointsCell: UITableViewCell {
     @IBOutlet weak var numberOfPoints: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        numberOfPoints =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: numberOfPoints.frame.height/2,imageView: numberOfPoints) as! UILabel
+        numberOfPoints =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: numberOfPoints.frame.height/2,imageView: numberOfPoints) as! UILabel
         // Initialization code
     }
 

@@ -14,7 +14,7 @@ class EditingProfileViewController: UIViewController , UINavigationControllerDel
     var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        Util.customizeProfileImage(borderImage: 2, cornerRedius: userPhoto.frame.height/2, imageView: userPhoto)
+        Utils.customizeProfileImage(borderImage: 2, cornerRedius: userPhoto.frame.height/2, imageView: userPhoto)
         
 
         // Do any additional setup after loading the view.

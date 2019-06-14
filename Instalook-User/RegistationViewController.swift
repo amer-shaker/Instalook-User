@@ -2,7 +2,7 @@
 //  RegistationViewController.swift
 //  Instalook-User
 //
-//  Created by jets on 5/31/19.
+//  Created by Amer Shaker on 5/31/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ class RegistationViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     private var presenter: RegistrationPresenter!
 
     
@@ -27,23 +28,26 @@ class RegistationViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func register(_ sender: UIButton) {
-        presenter.register(firstName: firstNameTextField.text!,
-                           lastName: lastNameTextField.text!,
-                           email: emailTextField.text!,
-                           password: passwordTextField.text!,
-                           confirmPassword: confirmPasswordTextField.text!)
+        
+        guard let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let confirmPassword = confirmPasswordTextField.text else { return }
+        
+        presenter.register(firstName: firstName,
+                           lastName: lastName,
+                           email: email,
+                           password: password,
+                           confirmPassword: confirmPassword)
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        firstNameTextField.resignFirstResponder()
-        lastNameTextField.resignFirstResponder()
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        confirmPasswordTextField.resignFirstResponder()
+        view.endEditing(true)
     }
     
     @IBAction func dismissViewController(_ sender: UISwipeGestureRecognizer) {
         sender.direction = UISwipeGestureRecognizerDirection.left
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

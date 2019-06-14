@@ -2,7 +2,7 @@
 //  LoginViewController+LoginDelegate.swift
 //  Instalook-User
 //
-//  Created by jets on 6/2/19.
+//  Created by Amer Shaker on 6/2/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -25,13 +25,11 @@ extension LoginViewController: LoginView {
     }
     
     func showError(error: String) {
-        let alertController = UIAlertController(title: "Error",
-                                                message: error,
-                                                preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
         
-        self.present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 }

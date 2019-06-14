@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
        override func viewDidLoad() {
         super.viewDidLoad()
         
-       userImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView
+       userImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView
         // intial of Two View controller
         reservatinTV = self.storyboard?.instantiateViewController(withIdentifier: "ReservationTVC") as! ReservationsTVController;
     pointTV = self.storyboard?.instantiateViewController(withIdentifier: "PointsTVController") as! PointsTVController
