@@ -29,4 +29,8 @@ struct NetworkingConstants {
     // Salon Requests
     static let getSalons = "getSalons"
     static let getSalonsById = "getSalonsById"
+    // Booking Request
+    static let getUserBookings = "getBookings"
+    static let book = "book"
+    static let cancelBooking = "cancelBooking"
 }

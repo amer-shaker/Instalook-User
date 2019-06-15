@@ -6,6 +6,7 @@
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class RegistationViewController: UIViewController, RegistrationView {
@@ -65,5 +66,10 @@ class RegistationViewController: UIViewController, RegistrationView {
                            email: email,
                            password: password,
                            confirmPassword: confirmPasswordTextField.text!)
+    }
+    
+    @IBAction func dismissViewController(_ sender: UISwipeGestureRecognizer) {
+        sender.direction = UISwipeGestureRecognizerDirection.left
+        self.dismiss(animated: true, completion: nil)
     }
 }

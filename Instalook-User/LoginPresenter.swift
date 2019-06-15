@@ -27,4 +27,14 @@ class LoginPresenter {
             }
         }
     }
+    
+    func validateFields(email: String, password: String) -> Bool {
+        
+        if email.isEmpty || password.isEmpty {
+            view?.showAlert()
+            return false
+        }
+        
+        return true
+    }
 }

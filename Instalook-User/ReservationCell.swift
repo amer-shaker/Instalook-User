@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReservationCell: UITableViewCell {
+class ReservationCell: UITableViewCell, ReservationCellView{
 
     @IBOutlet weak var serviceName: UILabel!
     @IBOutlet weak var salonName: UILabel!
@@ -31,6 +31,13 @@ class ReservationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func cancelReservation(_ sender: Any) {
+    }
+    
+    func showSalonName(salonName:String){
+        self.salonName.text = salonName
+    }
+    func showDateTime(dateTime:String){
+        self.timeOrTurnLabel.text = dateTime
     }
 
 }

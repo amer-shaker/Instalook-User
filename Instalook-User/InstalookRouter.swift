@@ -14,6 +14,9 @@ enum InstalookRouter: URLRequestConvertible {
     case login(email: String, password: String)
     case register(user: User)
     case search()
+    case allUserReservation(userId:Int)
+    case cancelReservation(reservationId:Int)
+    case book(booking:Booking)
     
     var path: String {
         
@@ -24,15 +27,21 @@ enum InstalookRouter: URLRequestConvertible {
             return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.register
         case .search:
             return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalons
+        case .allUserReservation:
+            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.getUserBookings
+        case .cancelReservation:
+            return NetworkingConstants.cancelBooking
+        case .book:
+            return NetworkingConstants.book
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .login, .register:
+        case .login, .register, .book:
             return .post
-        case .search:
+        case .search, .allUserReservation, .cancelReservation:
             return .get
         }
     }
@@ -64,6 +73,14 @@ enum InstalookRouter: URLRequestConvertible {
             bodyDictionary["password"] = user.password!
             
             print("Request Body:\nFirst Name: \(user.firstName!)\nLast Name: \(user.lastName!)\nEmail: \(user.email!)\nPassword: \(user.password!)")
+        case let .book(Booking):
+            bodyDictionary["userId"] = Booking.userId!
+            bodyDictionary["barberId"] = Booking.barberId!
+            bodyDictionary["date"] = Booking.date!
+            
+            print("Request Body:\nuser id : \(Booking.userId!)\nbarber id : \(Booking.barberId!)\n booking date: \(Booking.date!)")
+            
+            
         default:
             print("Empty request body")
         }
@@ -79,6 +96,10 @@ enum InstalookRouter: URLRequestConvertible {
         case let .login(email, password):
             params["email"] = email
             params["password"] = password
+        case let .allUserReservation(userId):
+            params["userId"] = userId
+        case let .cancelReservation(reservationId):
+            params["reservationId"] = reservationId
         default:
             print("Empty request params")
         }
@@ -96,9 +117,16 @@ enum InstalookRouter: URLRequestConvertible {
         var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
-        urlRequest.httpBody =
+        urlRequest.httpBody = jsonData
         
-        return try JSONEncoding.default.encode(urlRequest)
-        //return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        switch self {
+        case .login, .search,.allUserReservation, .cancelReservation:
+                return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        default:
+            return try JSONEncoding.default.encode(urlRequest)
+            
+            
+        }
     }
-}
+    }
+

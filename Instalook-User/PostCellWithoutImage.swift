@@ -19,7 +19,7 @@ class PostCellWithoutImage: UITableViewCell {
 
         // Initialization code
     }
-    func prepareForReuse() {
+    override func prepareForReuse() {
         salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
 
         

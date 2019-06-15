@@ -15,6 +15,7 @@
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
 		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
 		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
+		CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F49D622A1819900676E62 /* HomeViewController.swift */; };
 		CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */; };
 		CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */; };
 		CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566441229E9E0B00678EC4 /* ReservationCell.swift */; };
@@ -26,6 +27,7 @@
 		CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644F229F48B600678EC4 /* PostCellWithImage.swift */; };
 		CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */; };
 		CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6152D8229B2E5A00A230A1 /* Util.swift */; };
+		CC6588D722B520C800DCDBC9 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6588D622B520C800DCDBC9 /* Booking.swift */; };
 		CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D47C2296D9A10035471C /* AppDelegate.swift */; };
 		CC83D4822296D9A10035471C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4802296D9A10035471C /* Main.storyboard */; };
 		CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */; };
@@ -33,6 +35,9 @@
 		CC83D48A2296D9A10035471C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4882296D9A10035471C /* LaunchScreen.storyboard */; };
 		CC83D4952296D9A10035471C /* Instalook_UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4942296D9A10035471C /* Instalook_UserTests.swift */; };
 		CC83D4A02296D9A10035471C /* Instalook_UserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */; };
+		CCC97DB022A1CB9B006FA981 /* ReservationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DAF22A1CB9B006FA981 /* ReservationInteractor.swift */; };
+		CCC97DB222A1CBC8006FA981 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DB122A1CBC8006FA981 /* ReservationView.swift */; };
+		CCC97DB422A1CC97006FA981 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DB322A1CC97006FA981 /* Reservation.swift */; };
 		CCCF48DD22A0951F0037934D /* NetworkingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48DC22A0951F0037934D /* NetworkingConstants.swift */; };
 		CCCF48DF22A095490037934D /* InstalookRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48DE22A095490037934D /* InstalookRouter.swift */; };
 		CCCF48E122A0968B0037934D /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCF48E022A0968B0037934D /* Authentication.storyboard */; };
@@ -86,6 +91,7 @@
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
 		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
+		CC4F49D622A1819900676E62 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationPresenter.swift; sourceTree = "<group>"; };
 		CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTVController.swift; sourceTree = "<group>"; };
 		CC566441229E9E0B00678EC4 /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		CC56644F229F48B600678EC4 /* PostCellWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithImage.swift; sourceTree = "<group>"; };
 		CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithoutImage.swift; sourceTree = "<group>"; };
 		CC6152D8229B2E5A00A230A1 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		CC6588D622B520C800DCDBC9 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CC83D4792296D9A00035471C /* Instalook-User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instalook-User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC83D47C2296D9A10035471C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC83D4812296D9A10035471C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +117,9 @@
 		CC83D49B2296D9A10035471C /* Instalook-UserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instalook-UserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instalook_UserUITests.swift; sourceTree = "<group>"; };
 		CC83D4A12296D9A10035471C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC97DAF22A1CB9B006FA981 /* ReservationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInteractor.swift; sourceTree = "<group>"; };
+		CCC97DB122A1CBC8006FA981 /* ReservationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		CCC97DB322A1CC97006FA981 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		CCCF48DC22A0951F0037934D /* NetworkingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingConstants.swift; sourceTree = "<group>"; };
 		CCCF48DE22A095490037934D /* InstalookRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstalookRouter.swift; sourceTree = "<group>"; };
 		CCCF48E022A0968B0037934D /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
@@ -218,6 +228,7 @@
 		CC1DB59A2296DBAE003A08F6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CC4F49D622A1819900676E62 /* HomeViewController.swift */,
 				CCCF48E422A097990037934D /* Authentication */,
 				CC1DB59E2296DC8F003A08F6 /* Search Salon */,
 				CC4E9B1D229AD35C004AB0B4 /* User Profile */,
@@ -230,8 +241,10 @@
 			children = (
 				CCCF48E222A096E30037934D /* User.swift */,
 				CC1DB59F2296DD9C003A08F6 /* Salon.swift */,
-				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
 				CC1CA09022A027C40041FD0F /* Points.swift */,
+				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
+				CCC97DB322A1CC97006FA981 /* Reservation.swift */,
+				CC6588D622B520C800DCDBC9 /* Booking.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,12 +283,12 @@
 			children = (
 				CC4E9B20229AD3C1004AB0B4 /* Interactor */,
 				CC4E9B1F229AD3AC004AB0B4 /* Presenter */,
-				CC4E9B1E229AD396004AB0B4 /* Controller */,
+				CC4E9B1E229AD396004AB0B4 /* Views */,
 			);
 			name = "User Profile";
 			sourceTree = "<group>";
 		};
-		CC4E9B1E229AD396004AB0B4 /* Controller */ = {
+		CC4E9B1E229AD396004AB0B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CC56643E229E9D5E00678EC4 /* CellControllers */,
@@ -286,12 +299,13 @@
 				CC566449229EE7A400678EC4 /* FollowedSalonsTV.swift */,
 				CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */,
 			);
-			name = Controller;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		CC4E9B1F229AD3AC004AB0B4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CCC97DB522A1EDF7006FA981 /* Protocols */,
 				CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */,
 			);
 			name = Presenter;
@@ -300,6 +314,7 @@
 		CC4E9B20229AD3C1004AB0B4 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				CCC97DAF22A1CB9B006FA981 /* ReservationInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -377,6 +392,14 @@
 				CC83D4A12296D9A10035471C /* Info.plist */,
 			);
 			path = "Instalook-UserUITests";
+			sourceTree = "<group>";
+		};
+		CCC97DB522A1EDF7006FA981 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CCC97DB122A1CBC8006FA981 /* ReservationView.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		CCCF48DB22A08B490037934D /* Network */ = {
@@ -646,7 +669,10 @@
 			files = (
 				CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */,
 				CC6152D9229B2E5A00A230A1 /* Util.swift in Sources */,
+				CCC97DB422A1CC97006FA981 /* Reservation.swift in Sources */,
 				CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */,
+				CCC97DB022A1CB9B006FA981 /* ReservationInteractor.swift in Sources */,
+				CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */,
 				CCCF48EE22A0982A0037934D /* LoginPresenter.swift in Sources */,
 				CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */,
 				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
@@ -665,12 +691,14 @@
 				CC566448229EE16E00678EC4 /* PointsCell.swift in Sources */,
 				CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */,
 				CCCF48EA22A098090037934D /* RegistationViewController.swift in Sources */,
+				CCC97DB222A1CBC8006FA981 /* ReservationView.swift in Sources */,
 				CCCF48F022A098380037934D /* RegistrationView.swift in Sources */,
 				CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */,
 				CCCF48F822A09A2C0037934D /* SalonCellTableViewCell.swift in Sources */,
 				CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */,
 				CCCF48DF22A095490037934D /* InstalookRouter.swift in Sources */,
 				CC56644C229EE89000678EC4 /* FollowedSalonCell.swift in Sources */,
+				CC6588D722B520C800DCDBC9 /* Booking.swift in Sources */,
 				CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */,
 				CCCF48F222A098470037934D /* RegistrationPresenter.swift in Sources */,
 				CC1CA09122A027C40041FD0F /* Points.swift in Sources */,
@@ -836,6 +864,7 @@
 			baseConfigurationReference = 241341F9A567D668CB438047 /* Pods-Instalook-User.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Instalook-User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;
@@ -849,6 +878,7 @@
 			baseConfigurationReference = 2287170C49B3FB2EFC5B8547 /* Pods-Instalook-User.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Instalook-User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.instalook.Instalook;

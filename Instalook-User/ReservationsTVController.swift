@@ -8,16 +8,12 @@
 
 import UIKit
 
-class ReservationsTVController: UITableViewController {
-
+class ReservationsTVController: UITableViewController, ReservationView {
+    var reservationPresenter: ReservationPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         reservationPresenter = ReservationPresenter(reservationView: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,17 +30,28 @@ class ReservationsTVController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 8
+        return self.reservationPresenter!.getReservationsCount()
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! ReservationCell
+        
+        reservationPresenter?.configureCell(reservationCell: cell, index: indexPath.row)
+        
+        
+        
+        
+        
 
         // Configure the cell...
 
         return cell
     }
+    func showAlert(){}
+    func showIndicator(){}
+    func hideIndicator(){}
+    
 
 
     /*

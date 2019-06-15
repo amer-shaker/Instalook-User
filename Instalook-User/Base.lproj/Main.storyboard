@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="saloncell" rowHeight="118" id="ND5-Kb-y0u">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SalonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SalonTableViewCell" rowHeight="118" id="ND5-Kb-y0u" customClass="SalonCellTableViewCell" customModule="Instalook_User" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ND5-Kb-y0u" id="HXd-SF-mmj">
@@ -69,6 +69,12 @@
                                         <constraint firstItem="csM-pG-mKh" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="8" id="ti7-2C-ZIH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="salonAddress" destination="Uvq-jo-gGY" id="lc5-bI-1qQ"/>
+                                    <outlet property="salonImage" destination="p2M-zJ-o0g" id="CJ0-Bj-t4n"/>
+                                    <outlet property="salonName" destination="csM-pG-mKh" id="6f8-1o-jCz"/>
+                                    <outlet property="salonRate" destination="NgS-WJ-2t0" id="yx1-6A-dos"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="638" y="497"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home View Controller-->
         <scene sceneID="apI-Ml-PS4">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="wwq-ot-7hs" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="wwq-ot-7hs" customClass="HomeViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="B6F-JK-8Ak">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

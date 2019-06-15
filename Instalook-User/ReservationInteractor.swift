@@ -1,5 +1,5 @@
 //
-//  LoginInteractor.swift
+//  ReservationInteractor.swift
 //  Instalook-User
 //
 //  Created by jets on 5/31/19.
@@ -8,15 +8,15 @@
 
 import Foundation
 import Alamofire
-import AlamofireObjectMapper
 
-class LoginInteractor {
-    
-    func login(email: String,
-               password: String,
-               completionHandler:  @escaping (_ user: User?) -> Void) {
-        Alamofire.request(InstalookRouter.login(email: email, password: password))
-            .responseObject { (response: DataResponse<User>) in
+class ReservationInteractor
+{
+
+    public func getAllUserReservations(userId:Int,
+                                       commplesionHandler:@escaping (_ reservations:Array<Reservation>?)->Bool)
+    {
+        Alamofire.request(InstalookRouter.allUserReservation(userId: userId))
+            .responseObject { (response: DataResponse<Reservation>) in
                 
                 if let response = response.data {
                     print("Response Data: \(response)")
@@ -47,11 +47,12 @@ class LoginInteractor {
                     print("Response Error Code: nil")
                 }
                 
-                if let user = response.result.value {
-                    completionHandler(user)
+                if let reservations = response.result.value {
+                    commplesionHandler([reservations])
                 } else {
-                    completionHandler(nil)
+                    commplesionHandler(nil)
                 }
-        }
+        
     }
+}
 }

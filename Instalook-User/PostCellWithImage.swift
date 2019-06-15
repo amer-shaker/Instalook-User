@@ -18,7 +18,7 @@ class PostCellWithImage: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func prepareForReuse() {
+    override func prepareForReuse() {
         
     }
 
