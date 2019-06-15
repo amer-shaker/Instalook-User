@@ -16,6 +16,7 @@ class SalonCellTableViewCell: UITableViewCell, SearchCellView {
     @IBOutlet weak var salonName: UILabel!
     @IBOutlet weak var salonAddress: UILabel!
     
+    
     @IBOutlet weak var salonRate: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

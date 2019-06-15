@@ -25,6 +25,7 @@ class ReservationPresenter
             if reservations != nil {
                 self.reservations = reservations!
            // self.view?.successfullLogin()
+                //l,dlpl,
                 return true
             } else {
            // self.view?.failedLogin()
