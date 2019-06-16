@@ -2,7 +2,7 @@
 //  LoginPresenter.swift
 //  Instalook-User
 //
-//  Created by jets on 5/31/19.
+//  Created by Amer Shaker on 5/31/19.
 //  Copyright © 2019 Instalook. All rights reserved.
 //
 
@@ -11,30 +11,41 @@ import Foundation
 class LoginPresenter {
     
     private weak var view: LoginView?
-    private var loginInteractor: LoginInteractor
+    private let userInteractor: UserInteractor
+    private var user: User?
     
     init(view: LoginView) {
         self.view = view
-        loginInteractor = LoginInteractor()
+        userInteractor = UserInteractor()
     }
     
     func login(email: String, password: String) {
-        loginInteractor.login(email: email, password: password) { [unowned self] user in
-            if user != nil {
-                self.view?.successfullLogin()
-            } else {
-                self.view?.failedLogin()
+        
+        if isValidEmail(email: email),
+            isValidPassword(password: password) {
+            
+            view?.showIndicator()
+            userInteractor.login(email: email, password: password) { [unowned self] (user, error) in
+                
+                self.view?.hideIndicator()
+                if let error = error {
+                    self.view?.showError(error: error.localizedDescription)
+                } else {
+                    guard let user = user else { return }
+                    self.user = user
+                    self.view?.loginSuccess()
+                }
             }
+        } else {
+            view?.showError(error: "Invalid Credentials")
         }
     }
     
-    func validateFields(email: String, password: String) -> Bool {
-        
-        if email.isEmpty || password.isEmpty {
-            view?.showAlert()
-            return false
-        }
-        
-        return true
+    private func isValidEmail(email: String) -> Bool {
+        return !(email.isEmpty)
+    }
+    
+    private func isValidPassword(password: String) -> Bool {
+        return !(password.isEmpty)
     }
 }

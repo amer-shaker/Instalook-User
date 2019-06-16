@@ -63,29 +63,25 @@ enum InstalookRouter: URLRequestConvertible {
     
     var body: [String: Any] {
         
-        var bodyDictionary = [String:Any]()
+        var body = [String:Any]()
         
         switch self {
         case let .register(user):
-            bodyDictionary["first_name"] = user.firstName!
-            bodyDictionary["last_name"] = user.lastName!
-            bodyDictionary["email"] = user.email!
-            bodyDictionary["password"] = user.password!
-            
-            print("Request Body:\nFirst Name: \(user.firstName!)\nLast Name: \(user.lastName!)\nEmail: \(user.email!)\nPassword: \(user.password!)")
+            body[NetworkingConstants.firstName] = user.firstName!
+            body[NetworkingConstants.lastName] = user.lastName!
+            body[NetworkingConstants.email] = user.email!
+            body[NetworkingConstants.password] = user.password!
         case let .book(Booking):
             bodyDictionary["userId"] = Booking.userId!
             bodyDictionary["barberId"] = Booking.barberId!
             bodyDictionary["date"] = Booking.date!
             
             print("Request Body:\nuser id : \(Booking.userId!)\nbarber id : \(Booking.barberId!)\n booking date: \(Booking.date!)")
-            
-            
         default:
             print("Empty request body")
         }
         
-        return bodyDictionary
+        return body
     }
     
     var params: [String: Any] {
@@ -94,8 +90,8 @@ enum InstalookRouter: URLRequestConvertible {
         
         switch self {
         case let .login(email, password):
-            params["email"] = email
-            params["password"] = password
+            params[NetworkingConstants.email] = email
+            params[NetworkingConstants.password] = password
         case let .allUserReservation(userId):
             params["userId"] = userId
         case let .cancelReservation(reservationId):
@@ -110,23 +106,17 @@ enum InstalookRouter: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         let baseURL = try NetworkingConstants.baseURL.asURL()
         
-        let json = "{\"firstName\":\"Boy\", \"lastName\":\"Boy\", \"email\":\"AiOS\", \"password\":\"0000\"}"
-        let jsonData = json.data(using: .utf8, allowLossyConversion: false)!
-        
         // URL Request Components
         var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
-        urlRequest.httpBody = jsonData
         
         switch self {
         case .login, .search,.allUserReservation, .cancelReservation:
-                return try URLEncoding.methodDependent.encode(urlRequest, with: params)
-        default:
-            return try JSONEncoding.default.encode(urlRequest)
-            
-            
+            return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        case .register:
+            return try JSONEncoding.default.encode(urlRequest, with: body)
         }
     }
-    }
+}
 
