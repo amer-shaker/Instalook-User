@@ -17,25 +17,35 @@ class ReservationPresenter
     init(reservationView: ReservationView) {
         self.reservationView = reservationView
         self.reservationInteractor = ReservationInteractor()
-      getAllUserReservations()
-        
+        getAllUserReservations()
+        //reservationView.reloadViewData()
+    
+     
     }
-    public func getAllUserReservations()
-    {
+    public func getAllUserReservations()    {
         reservationView.showIndicator()
-        self.reservationInteractor.getAllUserReservations(userId: 222){ [unowned self] reservations in
+        self.reservationInteractor.getAllUserReservations(userId: 272){ [weak self] reservations in
             if reservations != nil {
-                self.reservations = reservations!
-                print("Reservation array for 222 user : \(reservations?.count)")
+                self?.reservations = reservations!
+                self?.reservationView.reloadViewData()
                 
-                return true
+                print("Reservation array for 272 user : \(reservations?.count)")
+                
+                
+                 return true
             } else {
                 print("Reservation array  = 0")
                 
-                return false
+                 return false
             }
         }
+        
         reservationView.hideIndicator()
+            }
+    public func cancelReservation(index:Int){
+        reservations.remove(at: index)
+        reservationInteractor.cancelReservation(bookId: index)
+        reservationView.reloadViewData()
     }
     public  func configureCell(reservationCell:ReservationCellView , index:Int)
     {
@@ -43,11 +53,14 @@ class ReservationPresenter
         let reservation = self.reservations[index]
         print(" salon name : \(reservation.salonName)")
         reservationCell.showSalonName(salonName: reservation.salonName)
-        reservationCell.showDateTime(dateTime: " date \(reservation.reservationDate)")  
+        reservationCell.showDateTime(dateTime: "\(reservation.reservationDate!)")
+        reservationCell.showBarberName(name: reservation.barberName)
+        
+        
         
     }
     public func getReservationsCount()->Int{
-        print("number of reser :\(reservations.count)")
+        
         return reservations.count
     }
     

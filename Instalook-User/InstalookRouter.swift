@@ -95,7 +95,7 @@ enum InstalookRouter: URLRequestConvertible {
         case let .allUserReservation(userId):
             params["userId"] = userId
         case let .cancelReservation(reservationId):
-            params["reservationId"] = reservationId
+            params["bookingId"] = reservationId
         default:
             print("Empty request params")
         }

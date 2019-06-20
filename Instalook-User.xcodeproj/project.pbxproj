@@ -25,6 +25,7 @@
 		CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */; };
 		CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644F229F48B600678EC4 /* PostCellWithImage.swift */; };
 		CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */; };
+		CC56ADDA22BBAAED00A3924A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56ADD922BBAAED00A3924A /* ProfileView.swift */; };
 		CC6152D9229B2E5A00A230A1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6152D8229B2E5A00A230A1 /* Utils.swift */; };
 		CC6588D722B520C800DCDBC9 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6588D622B520C800DCDBC9 /* Booking.swift */; };
 		CC7B009222B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B009122B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift */; };
@@ -105,6 +106,7 @@
 		CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPostsTVController.swift; sourceTree = "<group>"; };
 		CC56644F229F48B600678EC4 /* PostCellWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithImage.swift; sourceTree = "<group>"; };
 		CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithoutImage.swift; sourceTree = "<group>"; };
+		CC56ADD922BBAAED00A3924A /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CC6152D8229B2E5A00A230A1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CC6588D622B520C800DCDBC9 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CC7B009122B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				CCC97DB122A1CBC8006FA981 /* ReservationView.swift */,
+				CC56ADD922BBAAED00A3924A /* ProfileView.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				CC6152D9229B2E5A00A230A1 /* Utils.swift in Sources */,
 				CCCF48EE22A0982A0037934D /* LoginPresenter.swift in Sources */,
 				CC7E8ED422A375B700D6101A /* RegistrationViewController+PresenterDelegate.swift in Sources */,
+				CC56ADDA22BBAAED00A3924A /* ProfileView.swift in Sources */,
 				CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */,
 				CC83D47D2296D9A10035471C /* AppDelegate.swift in Sources */,
 				CC56644A229EE7A400678EC4 /* FollowedSalonsTV.swift in Sources */,

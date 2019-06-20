@@ -12,11 +12,13 @@ protocol ReservationView: class {
     func showAlert()
     func showIndicator()
     func hideIndicator()
+    func reloadViewData()
 }
 
 protocol ReservationCellView: class {
     func showSalonName(salonName:String)
     func showDateTime(dateTime:String)
+    func showBarberName(name:String)
 }
 
 

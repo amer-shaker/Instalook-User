@@ -30,14 +30,15 @@ class ReservationCell: UITableViewCell, ReservationCellView{
 
         // Configure the view for the selected state
     }
-    @IBAction func cancelReservation(_ sender: Any) {
-    }
     
     func showSalonName(salonName:String){
         self.salonName.text = salonName
     }
     func showDateTime(dateTime:String){
         self.timeOrTurnLabel.text = dateTime
+    }
+    func showBarberName(name:String){
+        self.serviceName.text = name
     }
 
 }

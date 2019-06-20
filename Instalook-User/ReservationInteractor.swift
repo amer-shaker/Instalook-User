@@ -55,4 +55,24 @@ class ReservationInteractor {
                 
         }
     }
+    public func cancelReservation(bookId:Int)-> Bool
+    {
+        var isDeleted:Bool!
+        Alamofire.request(InstalookRouter.cancelReservation(reservationId: bookId))
+            .responseString{(response: (DataResponse<String>)) in
+                if let data = response.result.value {
+                    
+                    isDeleted = true
+                    
+                } else {
+                   isDeleted = false
+                    
+                }
+
+                
+        }
+        return true
+        
+        
+    }
 }

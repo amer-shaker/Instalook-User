@@ -8,10 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,ProfileView {
 
     
     @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var numberOfSavedPostLabel: UILabel!
+    
+    @IBOutlet weak var numberOfFollowingsLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
     var reservatinTV:ReservationsTVController!
     var pointTV: PointsTVController!
@@ -49,17 +53,17 @@ class ProfileViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             profileView.bringSubview(toFront: reservatinTV.view)
-            print("hellookmlkmnlk")
+            print("reservation view")
             break
         case 1:
            profileView.bringSubview(toFront:followTV.view)
-            print("hellookmlkmnlk")
+            print("foolowing view")
         case 2:
             profileView.bringSubview(toFront:pointTV.view)
-            print("hellookmlkmnlk")
+            print("points view")
         case 3:
            profileView.bringSubview(toFront: savedPostTV.view)
-            print("hellookmlkmnlk")
+            print("saved post view")
         default:
             profileView.bringSubview(toFront: reservatinTV.view)
             
@@ -67,6 +71,20 @@ class ProfileViewController: UIViewController {
     }
     
     
+    
+    
+    func showUserName(name:String)
+    {
+        self.usernameLabel.text = name
+    }
+    func showUserPicture(){}
+    func showUserNumberOfFollowing(followings:Int){
+        self.numberOfFollowingsLabel.text = "\(followings)"
+    }
+    func showUserNumberOfSavedPosts(posts:Int){
+        self.numberOfSavedPostLabel.text = "\(posts)"
+
+    }
 
  
 
