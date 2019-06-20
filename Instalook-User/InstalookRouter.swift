@@ -72,9 +72,9 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
         case let .book(Booking):
-            bodyDictionary["userId"] = Booking.userId!
-            bodyDictionary["barberId"] = Booking.barberId!
-            bodyDictionary["date"] = Booking.date!
+            body["userId"] = Booking.userId!
+            body["barberId"] = Booking.barberId!
+            body["date"] = Booking.date!
             
             print("Request Body:\nuser id : \(Booking.userId!)\nbarber id : \(Booking.barberId!)\n booking date: \(Booking.date!)")
         default:
@@ -112,7 +112,7 @@ enum InstalookRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .login, .search,.allUserReservation, .cancelReservation:
+        case .login, .search,.allUserReservation, .cancelReservation, .book:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
         case .register:
             return try JSONEncoding.default.encode(urlRequest, with: body)

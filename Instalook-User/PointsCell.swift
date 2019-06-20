@@ -18,7 +18,7 @@ class PointsCell: UITableViewCell {
         // Initialization code
     }
     override func prepareForReuse() {
-        numberOfPoints =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: numberOfPoints.frame.height/2,imageView: numberOfPoints) as! UILabel
+        numberOfPoints =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: numberOfPoints.frame.height/2,imageView: numberOfPoints) as! UILabel
         
     }
 

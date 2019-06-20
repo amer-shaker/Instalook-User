@@ -9,10 +9,10 @@
 import Foundation
 import ObjectMapper
 class Reservation : Mappable {
+    var reservationDate:Double!
+    var salonName:String!
     var reservationId:Int!
-    var reservationDate:String!
-    var userId:Int!
-    var barberId:Int!
+    var barberName:String!
     
     init() {
         
@@ -23,9 +23,10 @@ class Reservation : Mappable {
     }
     
     func mapping(map: Map) {
-        reservationId <- map["booking_id"]
-        barberId <- map["barber_id"]
-        userId <- map["user_id"]
-        reservationDate <- map["booking_date_time"]
+        reservationDate <- map["time"]
+        salonName <- map["salonName"]
+        reservationId <- map["bookingId"]
+        barberName <- map["barberName"]
+        
     }
 }

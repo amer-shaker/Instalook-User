@@ -16,38 +16,31 @@ class ReservationsTVController: UITableViewController, ReservationView {
          reservationPresenter = ReservationPresenter(reservationView: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.reservationPresenter!.getReservationsCount()
+        print("number of in cell : \(reservationPresenter?.getReservationsCount())")
+        self.reloadInputViews()
+      return 5
+        
+        
     }
 
+   
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! ReservationCell
+       // reservationPresenter?.configureCell(reservationCell: cell, index: indexPath.row)
+        cell.salonName.text = "salon salon"
+       return cell
         
-        reservationPresenter?.configureCell(reservationCell: cell, index: indexPath.row)
-        
-        
-        
-        
-        
-
-        // Configure the cell...
-
-        return cell
     }
+    
     func showAlert(){}
     func showIndicator(){}
     func hideIndicator(){}

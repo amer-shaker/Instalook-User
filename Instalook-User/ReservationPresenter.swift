@@ -7,43 +7,48 @@
 //
 
 import Foundation
+import UIKit
 class ReservationPresenter
 {
-   weak var reservationView:ReservationView!
-    var reservationInteractor:ReservationInteractor!
-    var reservations = [Reservation]()
+    weak var reservationView: ReservationView!
+    var reservationInteractor: ReservationInteractor!
+    private var reservations = [Reservation]()
     
     init(reservationView: ReservationView) {
         self.reservationView = reservationView
         self.reservationInteractor = ReservationInteractor()
+      getAllUserReservations()
+        
     }
-    
     public func getAllUserReservations()
     {
         reservationView.showIndicator()
         self.reservationInteractor.getAllUserReservations(userId: 222){ [unowned self] reservations in
             if reservations != nil {
                 self.reservations = reservations!
-           // self.view?.successfullLogin()
-                //l,dlpl,
+                print("Reservation array for 222 user : \(reservations?.count)")
+                
                 return true
             } else {
-           // self.view?.failedLogin()
+                print("Reservation array  = 0")
+                
                 return false
+            }
         }
-    }
         reservationView.hideIndicator()
-  }
-  public  func configureCell(reservationCell:ReservationCellView , index:Int)
-    {
-        let reservation = self.reservations[index]
-        reservationCell.showSalonName(salonName: reservation.reservationDate)
-        reservationCell.showDateTime(dateTime: reservation.reservationDate)
-
-    
     }
-   public func getReservationsCount()->Int{
+    public  func configureCell(reservationCell:ReservationCellView , index:Int)
+    {
+        
+        let reservation = self.reservations[index]
+        print(" salon name : \(reservation.salonName)")
+        reservationCell.showSalonName(salonName: reservation.salonName)
+        reservationCell.showDateTime(dateTime: " date \(reservation.reservationDate)")  
+        
+    }
+    public func getReservationsCount()->Int{
+        print("number of reser :\(reservations.count)")
         return reservations.count
     }
-
+    
 }

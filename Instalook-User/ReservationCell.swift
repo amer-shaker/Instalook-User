@@ -20,7 +20,7 @@ class ReservationCell: UITableViewCell, ReservationCellView{
         // Initialization code
     }
     override func prepareForReuse() {
-        timeOrTurnLabel =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: timeOrTurnLabel.frame.height/2,imageView: timeOrTurnLabel) as! UILabel
+        timeOrTurnLabel =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: timeOrTurnLabel.frame.height/2,imageView: timeOrTurnLabel) as! UILabel
 
         
     }

@@ -15,12 +15,12 @@ class PostCellWithoutImage: UITableViewCell {
     @IBOutlet weak var salonImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
+        salonImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
 
         // Initialization code
     }
     override func prepareForReuse() {
-        salonImage =  Util.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
+        salonImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: salonImage.frame.height/2,imageView: salonImage) as! UIImageView
 
         
     }

@@ -9,50 +9,50 @@
 import Foundation
 import Alamofire
 
-class ReservationInteractor
-{
-
+class ReservationInteractor {
+    
     public func getAllUserReservations(userId:Int,
-                                       commplesionHandler:@escaping (_ reservations:Array<Reservation>?)->Bool)
-    {
+                                       commplesionHandler: @escaping (_ reservations :Array<Reservation>?) -> Bool) {
         Alamofire.request(InstalookRouter.allUserReservation(userId: userId))
-            .responseObject { (response: DataResponse<Reservation>) in
-                
+            .responseArray {(response: DataResponse<[Reservation]>) in
+                print("response anas: \(response)")
                 if let response = response.data {
-                    print("Response Data: \(response)")
+                    print("Response Data reservation: \(response)")
                 } else {
-                    print("Response Data: nil")
+                    print("Response Data reservation : nil")
                 }
                 
                 if let request = response.request {
-                    print("Response Request: \(request)")
-                    print("Response Request HTTP method: \(request.httpMethod!)")
+                    print("Response Request reservation: \(request)")
+                    print("Response Request HTTP method reservation: \(request.httpMethod!)")
                     
                     if let header = request.value(forHTTPHeaderField: NetworkingConstants.contentType) {
                         print("Response Request HTTP method: \(header)")
                     }
                 } else {
-                    print("Response Request: nil")
+                    print("Response Request reservation: nil")
                 }
                 
                 if let responseStatusCode = response.response {
-                    print("Response Status Code: \(responseStatusCode.statusCode)")
+                    print("Response Status Code reservation: \(responseStatusCode.statusCode)")
                 } else {
                     print("Response Status Code: nil")
                 }
                 
                 if let error = response.error {
-                    print("Response Error Code: \(error.localizedDescription)")
+                    print("Response Error Code reservation: \(error.localizedDescription)")
                 } else {
-                    print("Response Error Code: nil")
+                    print("Response Error Code reservation: nil")
                 }
                 
                 if let reservations = response.result.value {
-                    commplesionHandler([reservations])
+                    print("reservation count from Interactor : \(reservations.count)")
+                    commplesionHandler(reservations)
                 } else {
+                    print("NO DATA FROM REQUEST")
                     commplesionHandler(nil)
                 }
-        
+                
+        }
     }
-}
 }

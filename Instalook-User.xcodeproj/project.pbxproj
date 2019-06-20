@@ -15,7 +15,6 @@
 		CC4E9B27229AD94C004AB0B4 /* UserProfileScenario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC4E9B25229AD94C004AB0B4 /* UserProfileScenario.storyboard */; };
 		CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */; };
 		CC4E9B2F229ADC91004AB0B4 /* EditingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */; };
-		CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F49D622A1819900676E62 /* HomeViewController.swift */; };
 		CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */; };
 		CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */; };
 		CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566441229E9E0B00678EC4 /* ReservationCell.swift */; };
@@ -26,8 +25,8 @@
 		CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */; };
 		CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56644F229F48B600678EC4 /* PostCellWithImage.swift */; };
 		CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */; };
-		CC6588D722B520C800DCDBC9 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6588D622B520C800DCDBC9 /* Booking.swift */; };
 		CC6152D9229B2E5A00A230A1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6152D8229B2E5A00A230A1 /* Utils.swift */; };
+		CC6588D722B520C800DCDBC9 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6588D622B520C800DCDBC9 /* Booking.swift */; };
 		CC7B009222B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B009122B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift */; };
 		CC7B009422B3EDA200EDA3E9 /* LoginViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B009322B3EDA200EDA3E9 /* LoginViewController+TextField.swift */; };
 		CC7B009622B3F05A00EDA3E9 /* RegistrationViewController+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B009522B3F05A00EDA3E9 /* RegistrationViewController+TextFieldDelegate.swift */; };
@@ -59,6 +58,7 @@
 		CCCF48FC22A09A980037934D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FB22A09A980037934D /* SearchView.swift */; };
 		CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FD22A09AAC0037934D /* SearchCellView.swift */; };
 		CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FF22A09AD00037934D /* SearchInteractor.swift */; };
+		CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */; };
 		D5DBC3C599C247870CF2CA8C /* Pods_Instalook_UserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214DE4317A4395070C3F3075 /* Pods_Instalook_UserUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +95,6 @@
 		CC4E9B26229AD94C004AB0B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserProfileScenario.storyboard; sourceTree = "<group>"; };
 		CC4E9B2A229ADB2E004AB0B4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CC4E9B2E229ADC91004AB0B4 /* EditingProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileViewController.swift; sourceTree = "<group>"; };
-		CC4F49D622A1819900676E62 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationPresenter.swift; sourceTree = "<group>"; };
 		CC56643F229E9DC800678EC4 /* ReservationsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationsTVController.swift; sourceTree = "<group>"; };
 		CC566441229E9E0B00678EC4 /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
@@ -106,8 +105,8 @@
 		CC56644D229F46F000678EC4 /* SavedPostsTVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPostsTVController.swift; sourceTree = "<group>"; };
 		CC56644F229F48B600678EC4 /* PostCellWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithImage.swift; sourceTree = "<group>"; };
 		CC566451229F48E200678EC4 /* PostCellWithoutImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellWithoutImage.swift; sourceTree = "<group>"; };
-		CC6588D622B520C800DCDBC9 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CC6152D8229B2E5A00A230A1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CC6588D622B520C800DCDBC9 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		CC7B009122B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		CC7B009322B3EDA200EDA3E9 /* LoginViewController+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+TextField.swift"; sourceTree = "<group>"; };
 		CC7B009522B3F05A00EDA3E9 /* RegistrationViewController+TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+TextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		CCCF48FB22A09A980037934D /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CCCF48FD22A09AAC0037934D /* SearchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
 		CCCF48FF22A09AD00037934D /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +281,7 @@
 				CCCF48F722A09A2C0037934D /* SalonCellTableViewCell.swift */,
 				CC1DB59D2296DC78003A08F6 /* Presenter */,
 				CC1DB59C2296DC6A003A08F6 /* Interactor */,
+				CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */,
 			);
 			name = "Search Salon";
 			sourceTree = "<group>";
@@ -680,11 +681,9 @@
 				CCC97DB422A1CC97006FA981 /* Reservation.swift in Sources */,
 				CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */,
 				CCC97DB022A1CB9B006FA981 /* ReservationInteractor.swift in Sources */,
-				CC4F49D722A1819900676E62 /* HomeViewController.swift in Sources */,
 				CC7E8ED222A361EE00D6101A /* LoginViewController+PresenterDelegate.swift in Sources */,
 				CC7B009422B3EDA200EDA3E9 /* LoginViewController+TextField.swift in Sources */,
 				CC6152D9229B2E5A00A230A1 /* Utils.swift in Sources */,
-				CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */,
 				CCCF48EE22A0982A0037934D /* LoginPresenter.swift in Sources */,
 				CC7E8ED422A375B700D6101A /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CC566452229F48E200678EC4 /* PostCellWithoutImage.swift in Sources */,
@@ -696,9 +695,9 @@
 				CC7B009222B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift in Sources */,
 				CCCF48EC22A0981D0037934D /* LoginView.swift in Sources */,
 				CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */,
+				CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */,
 				CCCF48FC22A09A980037934D /* SearchView.swift in Sources */,
 				CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */,
-				CCCF48F422A098530037934D /* LoginInteractor.swift in Sources */,
 				CCCF48F422A098530037934D /* UserInteractor.swift in Sources */,
 				CCCF48E822A097F80037934D /* LoginViewController.swift in Sources */,
 				CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */,
