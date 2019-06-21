@@ -18,10 +18,14 @@ extension LoginViewController: LoginView {
         spinner.stopAnimating()
     }
     
-    func loginSuccess() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//        self.present(homeViewController, animated: true, completion: nil)
+    func loginSuccess(user:User) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+       let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let encodeData:Data = NSKeyedArchiver.archivedData(withRootObject: user)
+        UserDefaults.standard.set(encodeData, forKey:"user")
+       // UserDefaults.standard.set(user, forKey: "user")
+        
+        self.present(homeViewController, animated: true, completion: nil)
     }
     
     func showError(error: String) {

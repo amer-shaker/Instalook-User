@@ -9,10 +9,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController,ProfileView {
+    
+    var user:User!
 
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var numberOfSavedPostLabel: UILabel!
     
     @IBOutlet weak var numberOfFollowingsLabel: UILabel!
@@ -23,6 +26,13 @@ class ProfileViewController: UIViewController,ProfileView {
     var savedPostTV:SavedPostsTVController!
        override func viewDidLoad() {
         super.viewDidLoad()
+        let userData = UserDefaults.standard.data(forKey: "user")
+        let decodedUser:User =  NSKeyedUnarchiver.unarchiveObject(with: userData!) as! User
+        user = decodedUser
+        
+        
+        
+        print("search view search view search view search view")
         
        userImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView
         // intial of Two View controller
@@ -43,6 +53,12 @@ class ProfileViewController: UIViewController,ProfileView {
         
        
         //****
+        
+        //append data
+        usernameLabel.text = user.firstName!.appending(" ").appending(user.lastName!)
+        emailLabel.text = user.email!
+        print("user name : ")
+        //********
 
         
         

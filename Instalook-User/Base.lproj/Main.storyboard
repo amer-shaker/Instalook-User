@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="njW-d7-XJc">
             <objects>
-                <tableViewController id="0dm-FJ-TRM" customClass="SearchSalonsTableViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchViewController" id="0dm-FJ-TRM" customClass="SearchSalonsTableViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="Arb-Sr-BUE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

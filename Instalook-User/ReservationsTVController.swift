@@ -94,8 +94,12 @@ class ReservationsTVController: UITableViewController, ReservationView {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             reservationPresenter?.cancelReservation(index: indexPath.row)
-            reloadViewData()
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            //reloadViewData()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

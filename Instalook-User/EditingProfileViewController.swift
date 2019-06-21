@@ -9,12 +9,31 @@
 import UIKit
 
 class EditingProfileViewController: UIViewController , UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    var user:User!
 
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var userLocation: UITextField!
+    @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var userPhoto: UIImageView!
     var imagePicker = UIImagePickerController()
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let userData = UserDefaults.standard.data(forKey: "user")
+        let decodedUser:User =  NSKeyedUnarchiver.unarchiveObject(with: userData!) as! User
+        user = decodedUser
         Utils.customizeProfileImage(borderImage: 2, cornerRedius: userPhoto.frame.height/2, imageView: userPhoto)
+        //*********
+        firstName.text = user.firstName!
+        lastName.text = user.lastName!
+        userEmail.text = user.email!
+        
+        
+        
+        //***********
         
 
         // Do any additional setup after loading the view.
@@ -50,6 +69,14 @@ class EditingProfileViewController: UIViewController , UINavigationControllerDel
     }
     
 
+   
+    @IBAction func saveUserChanges(_ sender: Any) {
+        
+    }
+    @IBAction func discardUserChanges(_ sender: Any) {
+        self.dismiss(animated: true)
+        
+    }
     /*
     // MARK: - Navigation
 

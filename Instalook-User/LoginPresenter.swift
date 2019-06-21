@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class LoginPresenter {
     
@@ -33,7 +34,7 @@ class LoginPresenter {
                 } else {
                     guard let user = user else { return }
                     self.user = user
-                    self.view?.loginSuccess()
+                    self.view?.loginSuccess(user: self.user!)
                 }
             }
         } else {
@@ -48,4 +49,5 @@ class LoginPresenter {
     private func isValidPassword(password: String) -> Bool {
         return !(password.isEmpty)
     }
+    
 }

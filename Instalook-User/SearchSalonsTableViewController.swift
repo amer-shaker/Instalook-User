@@ -31,13 +31,22 @@ class SearchSalonsTableViewController: UITableViewController, SearchView {
     
     func showError(error: String){}
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //********
+                //********
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 118
         presenter = SearchPreseneter(view: self)
         // presenter.returnData()
+        
     }
     
     // MARK: - Table view data source

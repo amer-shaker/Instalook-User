@@ -10,12 +10,17 @@ import UIKit
 
 class HomeViewController: UITabBarController {
     
-    var user:User?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Home view Home view Home view Home view")
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("Home view Home view Home view Home view")
+        
+               // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

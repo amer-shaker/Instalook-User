@@ -11,6 +11,6 @@ import Foundation
 protocol LoginView: class {
     func showIndicator()
     func hideIndicator()
-    func loginSuccess()
+    func loginSuccess(user:User)
     func showError(error: String)
 }
