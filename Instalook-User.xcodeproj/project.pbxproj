@@ -59,6 +59,9 @@
 		CCCF48FC22A09A980037934D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FB22A09A980037934D /* SearchView.swift */; };
 		CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FD22A09AAC0037934D /* SearchCellView.swift */; };
 		CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FF22A09AD00037934D /* SearchInteractor.swift */; };
+		CCD18B1722BD69EB00DD1E2C /* EditingProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1622BD69EB00DD1E2C /* EditingProfilePresenter.swift */; };
+		CCD18B1922BD6A3600DD1E2C /* EditingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1822BD6A3600DD1E2C /* EditingProfileView.swift */; };
+		CCD18B1B22BE206900DD1E2C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1A22BE206900DD1E2C /* ProfilePresenter.swift */; };
 		CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */; };
 		D5DBC3C599C247870CF2CA8C /* Pods_Instalook_UserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214DE4317A4395070C3F3075 /* Pods_Instalook_UserUITests.framework */; };
 /* End PBXBuildFile section */
@@ -146,6 +149,9 @@
 		CCCF48FB22A09A980037934D /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CCCF48FD22A09AAC0037934D /* SearchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
 		CCCF48FF22A09AD00037934D /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		CCD18B1622BD69EB00DD1E2C /* EditingProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfilePresenter.swift; sourceTree = "<group>"; };
+		CCD18B1822BD6A3600DD1E2C /* EditingProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileView.swift; sourceTree = "<group>"; };
+		CCD18B1A22BE206900DD1E2C /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +323,8 @@
 			children = (
 				CCC97DB522A1EDF7006FA981 /* Protocols */,
 				CC549F0422A1791900B7DD57 /* ReservationPresenter.swift */,
+				CCD18B1622BD69EB00DD1E2C /* EditingProfilePresenter.swift */,
+				CCD18B1A22BE206900DD1E2C /* ProfilePresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -409,6 +417,7 @@
 			children = (
 				CCC97DB122A1CBC8006FA981 /* ReservationView.swift */,
 				CC56ADD922BBAAED00A3924A /* ProfileView.swift */,
+				CCD18B1822BD6A3600DD1E2C /* EditingProfileView.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -697,6 +706,7 @@
 				CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */,
 				CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */,
 				CC7B009222B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift in Sources */,
+				CCD18B1922BD6A3600DD1E2C /* EditingProfileView.swift in Sources */,
 				CCCF48EC22A0981D0037934D /* LoginView.swift in Sources */,
 				CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */,
 				CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */,
@@ -707,6 +717,7 @@
 				CC566450229F48B600678EC4 /* PostCellWithImage.swift in Sources */,
 				CC566448229EE16E00678EC4 /* PointsCell.swift in Sources */,
 				CC4E9B2D229ADB2E004AB0B4 /* ProfileViewController.swift in Sources */,
+				CCD18B1722BD69EB00DD1E2C /* EditingProfilePresenter.swift in Sources */,
 				CCCF48EA22A098090037934D /* RegistationViewController.swift in Sources */,
 				CCC97DB222A1CBC8006FA981 /* ReservationView.swift in Sources */,
 				CCCF48F022A098380037934D /* RegistrationView.swift in Sources */,
@@ -724,6 +735,7 @@
 				CC83D4852296D9A10035471C /* Instalook_User.xcdatamodeld in Sources */,
 				CCCF48FA22A09A560037934D /* SearchPreseneter.swift in Sources */,
 				CCCF48E322A096E30037934D /* User.swift in Sources */,
+				CCD18B1B22BE206900DD1E2C /* ProfilePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,7 @@ enum InstalookRouter: URLRequestConvertible {
     case allUserReservation(userId:Int)
     case cancelReservation(reservationId:Int)
     case book(booking:Booking)
+    case updateUserProfile(user:User,location:String)
     
     var path: String {
         
@@ -33,6 +34,8 @@ enum InstalookRouter: URLRequestConvertible {
             return NetworkingConstants.cancelBooking
         case .book:
             return NetworkingConstants.book
+        case .updateUserProfile:
+            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.update
         }
     }
     
@@ -43,6 +46,8 @@ enum InstalookRouter: URLRequestConvertible {
             return .post
         case .search, .allUserReservation, .cancelReservation:
             return .get
+        case .updateUserProfile:
+            return .patch
         }
     }
     
@@ -51,7 +56,7 @@ enum InstalookRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-        case .register:
+        case .register,.updateUserProfile:
             httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
             httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
@@ -71,6 +76,13 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.lastName] = user.lastName!
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
+        case let .updateUserProfile(user,location):
+            body[NetworkingConstants.userId] = user.userId!
+            body[NetworkingConstants.firstName] = user.firstName!
+            body[NetworkingConstants.lastName] = user.lastName!
+            body[NetworkingConstants.email] = user.email!
+            body[NetworkingConstants.password] = user.password!
+            body[NetworkingConstants.location] = location
         case let .book(Booking):
             body["userId"] = Booking.userId!
             body["barberId"] = Booking.barberId!
@@ -114,7 +126,7 @@ enum InstalookRouter: URLRequestConvertible {
         switch self {
         case .login, .search,.allUserReservation, .cancelReservation, .book:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
-        case .register:
+        case .register,.updateUserProfile:
             return try JSONEncoding.default.encode(urlRequest, with: body)
         }
     }
