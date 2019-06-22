@@ -1,109 +1,123 @@
-//
-//  SearchSalonsTableViewController.swift
-//  Instalook-User
-//
-//  Created by jets on 5/23/19.
-//  Copyright © 2019 Instalook. All rights reserved.
-//
-
 import UIKit
 
-class SearchSalonsTableViewController: UITableViewController, SearchView {
+enum scopedSelected: Int{
+    case Name = 0
+    case Location = 1
+}
+
+class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegate {
     
-    var dumyNameArray = ["bbbb","bbbb"]
-    var dumyAddressArray = ["BBB","BBB"]
+    // MARK: - properties
     var presenter : SearchPreseneter!
-    
-    func showIndicator()
-    {
-        
-    }
-    func hideIndicator(){
-    }
-    
-    func fetchingDataSuccess(salon : Salon){
-        
-    }
-    
-    func showname(name: String){
-        
-    }
-    
-    func showError(error: String){}
+    private var searchController = UISearchController()
+    private var resultsController = UITableViewController()
+    let activityView = UIActivityIndicatorView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = SearchPreseneter(view: self)
+        presenter.getSalons()
+        
+        // Activity Indicator configuration
+        activityIndicatorSetup()
+        
+        // Search Configuration
+        searchBarSetup()
+        
+        // TableView height configuration
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+        
+        // TableView row height configuration
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 118
-        presenter = SearchPreseneter(view: self)
-        // presenter.returnData()
+        
+    }
+    
+    func activityIndicatorSetup(){
+        activityView.center =  self.view.center
+        activityView.hidesWhenStopped = true
+        activityView.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.view.addSubview(activityView)
+    }
+    
+    func searchBarSetup(){
+        let searchBar = UISearchBar(frame: CGRect(x: 0,y: 0, width:(UIScreen.main.bounds.width), height: 70))
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles =  ["Name", "location"]
+        searchBar.selectedScopeButtonIndex = 0
+        searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
+        
+    }
+    
+    // MARK: - search bar delegete
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            presenter.getSalons()
+        } else{
+            filterTable(index: searchBar.selectedScopeButtonIndex, text: searchText)
+        }
+    }
+    
+    func filterTable(index: Int, text: String){
+        switch index{
+        case scopedSelected.Name.rawValue:
+            presenter.filterByName(text: text)
+        case scopedSelected.Location.rawValue:
+            presenter.filterByLocation(text: text)
+        default:
+            print("nothing")
+        }
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dumyNameArray.count
+        return presenter.getSalonsCount()
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SalonTableViewCell", for: indexPath) as! SalonCellTableViewCell
-        cell.salonName.text = dumyNameArray[indexPath.row]
-        cell.salonAddress.text = dumyAddressArray[indexPath.row]
-        // presenter.showname(cell: cell, index: indexPath.row)
         
+        let identifier = "SalonTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SalonTableViewCell
+        
+        //configure cell
+        presenter.configureCell(cell: cell, index: indexPath.row)
         return cell
     }
     
+}
+
+// MARK: - extension
+extension SearchSalonsTableViewController: SearchView{
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func showIndicator(){
+        activityView.startAnimating()
+    }
+    func hideIndicator(){
+        activityView.stopAnimating()
+    }
+    func fetchingDataSuccess(){
+        print("fetchingDataSuccess")
+    }
+    func showError(error: String?){
+        let alert = UIAlertController(title: "Error", message: "\(error!)", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Reload", style: UIAlertActionStyle.default, handler: {(action: UIAlertAction!) in
+            self.presenter.getSalons()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func reloadData() {
+        tableView.reloadData()
+    }
     
 }

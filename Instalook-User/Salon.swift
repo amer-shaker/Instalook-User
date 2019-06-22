@@ -11,12 +11,13 @@ import ObjectMapper
 
 class Salon: Mappable {
     
-    var id: Int?
-    var name: String?
-    var location: String?
-    var type: String?
-    var email: String?
-    var rate: Int?
+    var salonID: Int?
+    var salonName, salonEmail, salonLocation, salonType: String?
+    var images: [Images]?
+    var posts: [Post]?
+    var points: [Points]?
+    var users: [User]?
+    var salonRate: Int?
     
     init() {
         
@@ -27,10 +28,18 @@ class Salon: Mappable {
     }
     
     func mapping(map: Map) {
-        /*userId <- map["userId"]
-         firstName <- map["firstName"]
-         lastName <- map["lastName"]
-         email <- map["email"]
-         password <- map["password"]*/
+        
+        if map.mappingType == MappingType.fromJSON{
+            salonID <- map["salonId"]
+            salonName <- map["salonName"]
+            salonEmail <- map["salonEmail"]
+            salonLocation <- map["salonLocation"]
+            salonType <- map["salonType"]
+            images <- map["images"]
+            posts <- map["posts"]
+            points <- map["points"]
+            users <- map["users"]
+            salonRate <- map["salonRate"]
+        }
     }
 }

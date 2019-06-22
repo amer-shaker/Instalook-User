@@ -11,7 +11,7 @@ import Foundation
 class RegistrationPresenter {
     
     private weak var view: RegistrationView?
-    private let userInteractor: UserInteractor
+    private let userInteractor: UserInteractor?
     private var user: User?
     
     init(view: RegistrationView) {
@@ -39,7 +39,7 @@ class RegistrationPresenter {
             user.password = password
             
             view?.showIndicator()
-            userInteractor.register(user: user) { [unowned self] error in
+            userInteractor?.register(user: user) { [unowned self] error in
                 
                 self.view?.hideIndicator()
                 if let error = error {

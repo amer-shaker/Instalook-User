@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 class User: NSObject, NSCoding, Mappable {
-    
+
     var userId: Int?
     var firstName: String?
     var lastName: String?
@@ -20,7 +20,7 @@ class User: NSObject, NSCoding, Mappable {
     override init() {
         
     }
-    
+
     init(userId: Int?, firstName: String?, lastName: String?, email: String?, password: String?) {
         self.userId = userId
         self.firstName = firstName
@@ -46,7 +46,7 @@ class User: NSObject, NSCoding, Mappable {
         aCoder.encode(email, forKey: "email")
         aCoder.encode(password, forKey: "password")
     }
-
+    
     required init(map: Map) {
         
     }

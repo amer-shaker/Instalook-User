@@ -14,6 +14,11 @@ enum InstalookRouter: URLRequestConvertible {
     case login(email: String, password: String)
     case register(user: User)
     case search()
+    case salonRate(salonId: Int)
+    case allUserReservation(userId:Int)
+    case cancelReservation(reservationId:Int)
+    case book(booking:Booking)
+    case updateUserProfile(user:User,location:String)
     
     var path: String {
         
@@ -24,16 +29,28 @@ enum InstalookRouter: URLRequestConvertible {
             return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.register
         case .search:
             return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalons
+        case .allUserReservation:
+            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.getUserBookings
+        case .cancelReservation:
+            return NetworkingConstants.cancelBooking
+        case .book:
+            return NetworkingConstants.book
+        case .salonRate:
+            return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalonRate
+        case .updateUserProfile:
+            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.update
         }
     }
     
     var httpMethod: HTTPMethod {
         
         switch self {
-        case .login, .register:
+        case .login, .register, .book:
             return .post
-        case .search:
+        case .search, .allUserReservation, .cancelReservation, .salonRate:
             return .get
+        case .updateUserProfile:
+            return .patch
         }
     }
     
@@ -42,7 +59,7 @@ enum InstalookRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-        case .register:
+        case .register,.updateUserProfile:
             httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
             httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
@@ -62,6 +79,19 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.lastName] = user.lastName!
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
+        case let .updateUserProfile(user,location):
+            body[NetworkingConstants.userId] = user.userId!
+            body[NetworkingConstants.firstName] = user.firstName!
+            body[NetworkingConstants.lastName] = user.lastName!
+            body[NetworkingConstants.email] = user.email!
+            body[NetworkingConstants.password] = user.password!
+            body[NetworkingConstants.location] = location
+        case let .book(Booking):
+            body["userId"] = Booking.userId!
+            body["barberId"] = Booking.barberId!
+            body["date"] = Booking.date!
+            
+            print("Request Body:\nuser id : \(Booking.userId!)\nbarber id : \(Booking.barberId!)\n booking date: \(Booking.date!)")
         default:
             print("Empty request body")
         }
@@ -77,6 +107,12 @@ enum InstalookRouter: URLRequestConvertible {
         case let .login(email, password):
             params[NetworkingConstants.email] = email
             params[NetworkingConstants.password] = password
+        case let .allUserReservation(userId):
+            params["userId"] = userId
+        case let .cancelReservation(reservationId):
+            params["bookingId"] = reservationId
+        case let .salonRate(salonId):
+            params[NetworkingConstants.salonId] = salonId
         default:
             print("Empty request params")
         }
@@ -86,17 +122,18 @@ enum InstalookRouter: URLRequestConvertible {
     
     func asURLRequest() throws -> URLRequest {
         let baseURL = try NetworkingConstants.baseURL.asURL()
-
+        
         // URL Request Components
         var urlRequest = URLRequest(url: baseURL.appendingPathComponent(path))
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .login, .search:
-                return try URLEncoding.methodDependent.encode(urlRequest, with: params)
-        case .register:
+        case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate:
+            return try URLEncoding.methodDependent.encode(urlRequest, with: params)
+        case .register,.updateUserProfile:
             return try JSONEncoding.default.encode(urlRequest, with: body)
         }
     }
 }
+

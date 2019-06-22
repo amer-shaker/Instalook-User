@@ -17,4 +17,7 @@ class Utils {
         imageView.clipsToBounds = true
         return imageView
     }
+   public static func showIndicator()
+   {}
+    
 }
