@@ -14,6 +14,7 @@ enum InstalookRouter: URLRequestConvertible {
     case login(email: String, password: String)
     case register(user: User)
     case search()
+    case salonRate(salonId: Int)
     case allUserReservation(userId:Int)
     case cancelReservation(reservationId:Int)
     case book(booking:Booking)
@@ -33,6 +34,8 @@ enum InstalookRouter: URLRequestConvertible {
             return NetworkingConstants.cancelBooking
         case .book:
             return NetworkingConstants.book
+        case .salonRate:
+            return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalonRate
         }
     }
     
@@ -41,7 +44,7 @@ enum InstalookRouter: URLRequestConvertible {
         switch self {
         case .login, .register, .book:
             return .post
-        case .search, .allUserReservation, .cancelReservation:
+        case .search, .allUserReservation, .cancelReservation, .salonRate:
             return .get
         }
     }
@@ -96,6 +99,8 @@ enum InstalookRouter: URLRequestConvertible {
             params["userId"] = userId
         case let .cancelReservation(reservationId):
             params["bookingId"] = reservationId
+        case let .salonRate(salonId):
+            params[NetworkingConstants.salonId] = salonId
         default:
             print("Empty request params")
         }
@@ -112,7 +117,7 @@ enum InstalookRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .login, .search,.allUserReservation, .cancelReservation, .book:
+        case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
         case .register:
             return try JSONEncoding.default.encode(urlRequest, with: body)

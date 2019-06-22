@@ -13,17 +13,18 @@
         <!--Item-->
         <scene sceneID="njW-d7-XJc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfs-nZ-PUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="SearchViewController" id="0dm-FJ-TRM" customClass="SearchSalonsTableViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="Arb-Sr-BUE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SalonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SalonTableViewCell" rowHeight="118" id="ND5-Kb-y0u" customClass="SalonCellTableViewCell" customModule="Instalook_User" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SalonTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SalonTableViewCell" rowHeight="118" id="ND5-Kb-y0u" customClass="SalonTableViewCell" customModule="Instalook_User" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ND5-Kb-y0u" id="HXd-SF-mmj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-zJ-o0g">
@@ -34,38 +35,38 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Salon name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csM-pG-mKh">
-                                            <rect key="frame" x="116" y="8" width="157" height="21"/>
+                                            <rect key="frame" x="116" y="8" width="156" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvq-jo-gGY">
-                                            <rect key="frame" x="116" y="37" width="157" height="21"/>
+                                            <rect key="frame" x="116" y="37" width="156" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-WJ-2t0">
-                                            <rect key="frame" x="130" y="66" width="128" height="28"/>
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="NgS-WJ-2t0" customClass="CosmosView" customModule="Cosmos">
+                                            <rect key="frame" x="116" y="66" width="128" height="20"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="p2M-zJ-o0g" firstAttribute="top" secondItem="HXd-SF-mmj" secondAttribute="topMargin" id="4YZ-cM-FrX"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="NgS-WJ-2t0" secondAttribute="bottom" constant="15" id="5ZW-OI-Amx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="NgS-WJ-2t0" secondAttribute="bottom" constant="23" id="5ZW-OI-Amx"/>
                                         <constraint firstItem="Uvq-jo-gGY" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="8" id="5cN-ie-JBw"/>
                                         <constraint firstItem="NgS-WJ-2t0" firstAttribute="top" secondItem="Uvq-jo-gGY" secondAttribute="bottom" constant="8" id="6KI-m0-ZiL"/>
-                                        <constraint firstAttribute="trailing" secondItem="NgS-WJ-2t0" secondAttribute="trailing" constant="117" id="DCM-Ba-NS7"/>
+                                        <constraint firstAttribute="trailing" secondItem="NgS-WJ-2t0" secondAttribute="trailing" constant="131" id="DCM-Ba-NS7"/>
                                         <constraint firstItem="p2M-zJ-o0g" firstAttribute="centerY" secondItem="HXd-SF-mmj" secondAttribute="centerY" id="DWa-fx-1YQ"/>
                                         <constraint firstItem="csM-pG-mKh" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="8" id="M12-Qb-9Gb"/>
                                         <constraint firstItem="p2M-zJ-o0g" firstAttribute="top" secondItem="csM-pG-mKh" secondAttribute="top" id="MLu-rG-P1M"/>
                                         <constraint firstItem="csM-pG-mKh" firstAttribute="top" secondItem="HXd-SF-mmj" secondAttribute="topMargin" id="TKo-Rn-rSV"/>
-                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="22" id="asX-9I-UZj"/>
-                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="centerX" secondItem="Uvq-jo-gGY" secondAttribute="centerX" id="bX1-e6-c6N"/>
+                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="8" id="asX-9I-UZj"/>
+                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="centerX" secondItem="Uvq-jo-gGY" secondAttribute="centerX" constant="-14" id="bX1-e6-c6N"/>
                                         <constraint firstItem="p2M-zJ-o0g" firstAttribute="bottom" secondItem="HXd-SF-mmj" secondAttribute="bottomMargin" constant="-1" id="bZP-OQ-BzA"/>
                                         <constraint firstItem="p2M-zJ-o0g" firstAttribute="leading" secondItem="HXd-SF-mmj" secondAttribute="leadingMargin" id="f4Y-ah-unx"/>
                                         <constraint firstItem="Uvq-jo-gGY" firstAttribute="top" secondItem="csM-pG-mKh" secondAttribute="bottom" constant="8" id="ncb-dq-YM3"/>
-                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="centerX" secondItem="csM-pG-mKh" secondAttribute="centerX" id="s2p-vJ-sQp"/>
+                                        <constraint firstItem="NgS-WJ-2t0" firstAttribute="centerX" secondItem="csM-pG-mKh" secondAttribute="centerX" constant="-14" id="s2p-vJ-sQp"/>
                                         <constraint firstItem="csM-pG-mKh" firstAttribute="leading" secondItem="p2M-zJ-o0g" secondAttribute="trailing" constant="8" id="ti7-2C-ZIH"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -84,7 +85,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="NsF-wE-rrb"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qfs-nZ-PUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="745" y="29"/>
         </scene>

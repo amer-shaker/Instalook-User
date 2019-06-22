@@ -40,6 +40,10 @@
 		CC83D48A2296D9A10035471C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC83D4882296D9A10035471C /* LaunchScreen.storyboard */; };
 		CC83D4952296D9A10035471C /* Instalook_UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D4942296D9A10035471C /* Instalook_UserTests.swift */; };
 		CC83D4A02296D9A10035471C /* Instalook_UserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */; };
+		CCA9042522BE1BC5008908AB /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9042422BE1BC5008908AB /* SearchInteractor.swift */; };
+		CCA9042722BE1C8E008908AB /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9042622BE1C8E008908AB /* NetworkConnectivity.swift */; };
+		CCA9042922BE2245008908AB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9042822BE2245008908AB /* Images.swift */; };
+		CCA9042B22BE2269008908AB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9042A22BE2269008908AB /* Post.swift */; };
 		CCC97DB022A1CB9B006FA981 /* ReservationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DAF22A1CB9B006FA981 /* ReservationInteractor.swift */; };
 		CCC97DB222A1CBC8006FA981 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DB122A1CBC8006FA981 /* ReservationView.swift */; };
 		CCC97DB422A1CC97006FA981 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC97DB322A1CC97006FA981 /* Reservation.swift */; };
@@ -54,11 +58,10 @@
 		CCCF48F022A098380037934D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48EF22A098380037934D /* RegistrationView.swift */; };
 		CCCF48F222A098470037934D /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48F122A098470037934D /* RegistrationPresenter.swift */; };
 		CCCF48F422A098530037934D /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48F322A098530037934D /* UserInteractor.swift */; };
-		CCCF48F822A09A2C0037934D /* SalonCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48F722A09A2C0037934D /* SalonCellTableViewCell.swift */; };
+		CCCF48F822A09A2C0037934D /* SalonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48F722A09A2C0037934D /* SalonTableViewCell.swift */; };
 		CCCF48FA22A09A560037934D /* SearchPreseneter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48F922A09A560037934D /* SearchPreseneter.swift */; };
 		CCCF48FC22A09A980037934D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FB22A09A980037934D /* SearchView.swift */; };
 		CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FD22A09AAC0037934D /* SearchCellView.swift */; };
-		CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF48FF22A09AD00037934D /* SearchInteractor.swift */; };
 		CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */; };
 		D5DBC3C599C247870CF2CA8C /* Pods_Instalook_UserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214DE4317A4395070C3F3075 /* Pods_Instalook_UserUITests.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +130,10 @@
 		CC83D49B2296D9A10035471C /* Instalook-UserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instalook-UserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC83D49F2296D9A10035471C /* Instalook_UserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instalook_UserUITests.swift; sourceTree = "<group>"; };
 		CC83D4A12296D9A10035471C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA9042422BE1BC5008908AB /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		CCA9042622BE1C8E008908AB /* NetworkConnectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
+		CCA9042822BE2245008908AB /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		CCA9042A22BE2269008908AB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CCC97DAF22A1CB9B006FA981 /* ReservationInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationInteractor.swift; sourceTree = "<group>"; };
 		CCC97DB122A1CBC8006FA981 /* ReservationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		CCC97DB322A1CC97006FA981 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
@@ -141,11 +148,10 @@
 		CCCF48EF22A098380037934D /* RegistrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		CCCF48F122A098470037934D /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		CCCF48F322A098530037934D /* UserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
-		CCCF48F722A09A2C0037934D /* SalonCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalonCellTableViewCell.swift; sourceTree = "<group>"; };
+		CCCF48F722A09A2C0037934D /* SalonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalonTableViewCell.swift; sourceTree = "<group>"; };
 		CCCF48F922A09A560037934D /* SearchPreseneter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPreseneter.swift; sourceTree = "<group>"; };
 		CCCF48FB22A09A980037934D /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CCCF48FD22A09AAC0037934D /* SearchCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
-		CCCF48FF22A09AD00037934D /* SearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +260,8 @@
 				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
 				CCC97DB322A1CC97006FA981 /* Reservation.swift */,
 				CC6588D622B520C800DCDBC9 /* Booking.swift */,
+				CCA9042822BE2245008908AB /* Images.swift */,
+				CCA9042A22BE2269008908AB /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -261,7 +269,8 @@
 		CC1DB59C2296DC6A003A08F6 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				CCCF48FF22A09AD00037934D /* SearchInteractor.swift */,
+				CCA9042422BE1BC5008908AB /* SearchInteractor.swift */,
+				CCA9042622BE1C8E008908AB /* NetworkConnectivity.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -280,7 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1DB5A12296DE51003A08F6 /* SearchSalonsTableViewController.swift */,
-				CCCF48F722A09A2C0037934D /* SalonCellTableViewCell.swift */,
+				CCCF48F722A09A2C0037934D /* SalonTableViewCell.swift */,
 				CC1DB59D2296DC78003A08F6 /* Presenter */,
 				CC1DB59C2296DC6A003A08F6 /* Interactor */,
 				CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */,
@@ -682,11 +691,11 @@
 			files = (
 				CC566442229E9E0B00678EC4 /* ReservationCell.swift in Sources */,
 				CCC97DB422A1CC97006FA981 /* Reservation.swift in Sources */,
-				CCCF490022A09AD00037934D /* SearchInteractor.swift in Sources */,
 				CCC97DB022A1CB9B006FA981 /* ReservationInteractor.swift in Sources */,
 				CC7E8ED222A361EE00D6101A /* LoginViewController+PresenterDelegate.swift in Sources */,
 				CC7B009422B3EDA200EDA3E9 /* LoginViewController+TextField.swift in Sources */,
 				CC6152D9229B2E5A00A230A1 /* Utils.swift in Sources */,
+				CCA9042B22BE2269008908AB /* Post.swift in Sources */,
 				CCCF48EE22A0982A0037934D /* LoginPresenter.swift in Sources */,
 				CC7E8ED422A375B700D6101A /* RegistrationViewController+PresenterDelegate.swift in Sources */,
 				CC56ADDA22BBAAED00A3924A /* ProfileView.swift in Sources */,
@@ -696,9 +705,12 @@
 				CCCF48DD22A0951F0037934D /* NetworkingConstants.swift in Sources */,
 				CC1DB5A22296DE51003A08F6 /* SearchSalonsTableViewController.swift in Sources */,
 				CC566446229EDFAD00678EC4 /* PointsTVController.swift in Sources */,
+				CCA9042922BE2245008908AB /* Images.swift in Sources */,
 				CC7B009222B3EB6300EDA3E9 /* LoginViewController+TextFieldDelegate.swift in Sources */,
+				CCA9042722BE1C8E008908AB /* NetworkConnectivity.swift in Sources */,
 				CCCF48EC22A0981D0037934D /* LoginView.swift in Sources */,
 				CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */,
+				CCA9042522BE1BC5008908AB /* SearchInteractor.swift in Sources */,
 				CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */,
 				CCCF48FC22A09A980037934D /* SearchView.swift in Sources */,
 				CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */,
@@ -711,7 +723,7 @@
 				CCC97DB222A1CBC8006FA981 /* ReservationView.swift in Sources */,
 				CCCF48F022A098380037934D /* RegistrationView.swift in Sources */,
 				CC566440229E9DC800678EC4 /* ReservationsTVController.swift in Sources */,
-				CCCF48F822A09A2C0037934D /* SalonCellTableViewCell.swift in Sources */,
+				CCCF48F822A09A2C0037934D /* SalonTableViewCell.swift in Sources */,
 				CC56644E229F46F000678EC4 /* SavedPostsTVController.swift in Sources */,
 				CCCF48DF22A095490037934D /* InstalookRouter.swift in Sources */,
 				CC56644C229EE89000678EC4 /* FollowedSalonCell.swift in Sources */,

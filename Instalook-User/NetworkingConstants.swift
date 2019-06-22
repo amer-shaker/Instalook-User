@@ -32,10 +32,14 @@ struct NetworkingConstants {
     static let lastName = "lastName"
     static let email = "email"
     static let password = "password"
+    static let salonId = "salonId"
+
     
     // Salon Requests
     static let getSalons = "getSalons"
     static let getSalonsById = "getSalonsById"
+    static let getSalonRate = "getSalonRate"
+
     // Booking Request
     static let getUserBookings = "getBookings"
     static let book = "book"
