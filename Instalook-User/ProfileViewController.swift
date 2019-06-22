@@ -18,17 +18,32 @@ class ProfileViewController: UIViewController,ProfileView {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var numberOfSavedPostLabel: UILabel!
     
+    @IBAction func goToEditingProfile(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "UserProfileScenario", bundle: Bundle.main)
+        let editingProfileView = storyboard.instantiateViewController(withIdentifier: "EditingProfileController") as! EditingProfileViewController
+        self.present(editingProfileView, animated: true, completion: nil)
+        editingProfileView.profileView = self
+        
+        
+    }
     @IBOutlet weak var numberOfFollowingsLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    var profilePresenter:ProfilePresenter!
     var reservatinTV:ReservationsTVController!
     var pointTV: PointsTVController!
     var followTV: FollowedSalonsTV!
     var savedPostTV:SavedPostsTVController!
+    
        override func viewDidLoad() {
         super.viewDidLoad()
+        profilePresenter = ProfilePresenter(profileView: self)
         let userData = UserDefaults.standard.data(forKey: "user")
         let decodedUser:User =  NSKeyedUnarchiver.unarchiveObject(with: userData!) as! User
         user = decodedUser
+        usernameLabel.text = user.firstName!.appending(" ").appending(user.lastName!)
+        emailLabel.text = user.email!
+        print("user name : ")
+        
         
         
         
@@ -54,12 +69,6 @@ class ProfileViewController: UIViewController,ProfileView {
        
         //****
         
-        //append data
-        usernameLabel.text = user.firstName!.appending(" ").appending(user.lastName!)
-        emailLabel.text = user.email!
-        print("user name : ")
-        //********
-
         
         
 
@@ -100,6 +109,15 @@ class ProfileViewController: UIViewController,ProfileView {
     func showUserNumberOfSavedPosts(posts:Int){
         self.numberOfSavedPostLabel.text = "\(posts)"
 
+    }
+    
+    func refreshProfileData(){
+        let userData = UserDefaults.standard.data(forKey: "user")
+        let decodedUser:User =  NSKeyedUnarchiver.unarchiveObject(with: userData!) as! User
+        user = decodedUser
+        usernameLabel.text = user.firstName!.appending(" ").appending(user.lastName!)
+        emailLabel.text = user.email!
+        print("user name : ")
     }
 
  

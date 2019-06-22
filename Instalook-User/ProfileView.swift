@@ -13,5 +13,6 @@ protocol ProfileView {
     func showUserPicture()
     func showUserNumberOfFollowing(followings:Int)
     func showUserNumberOfSavedPosts(posts:Int)
+    func refreshProfileData()
     
 }

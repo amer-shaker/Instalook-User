@@ -130,7 +130,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Edit Profile"/>
                                                 <connections>
-                                                    <segue destination="2zp-cz-Sop" kind="modal" id="4hl-qY-Aji"/>
+                                                    <action selector="goToEditingProfile:" destination="hUo-tc-WXB" eventType="touchUpInside" id="xyX-rx-Fce"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mohamed Ramadan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUR-Ie-eHY">
@@ -259,7 +259,7 @@
         <!--Editing Profile View Controller-->
         <scene sceneID="JVR-Bu-bqM">
             <objects>
-                <viewController id="2zp-cz-Sop" customClass="EditingProfileViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditingProfileController" id="2zp-cz-Sop" customClass="EditingProfileViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Knz-ml-dHc"/>
                         <viewControllerLayoutGuide type="bottom" id="DO5-dE-rU9"/>

@@ -13,18 +13,23 @@ class ReservationPresenter
     weak var reservationView: ReservationView!
     var reservationInteractor: ReservationInteractor!
     private var reservations = [Reservation]()
+    let user:User!
     
     init(reservationView: ReservationView) {
         self.reservationView = reservationView
         self.reservationInteractor = ReservationInteractor()
+        let userData = UserDefaults.standard.data(forKey: "user")
+        let decodedUser:User =  NSKeyedUnarchiver.unarchiveObject(with: userData!) as! User
+        user = decodedUser
         getAllUserReservations()
         //reservationView.reloadViewData()
+        
     
      
     }
     public func getAllUserReservations()    {
         reservationView.showIndicator()
-        self.reservationInteractor.getAllUserReservations(userId: 332){ [weak self] reservations in
+        self.reservationInteractor.getAllUserReservations(userId: user.userId!){ [weak self] reservations in
             if reservations != nil {
                 self?.reservations = reservations!
                 self?.reservationView.reloadViewData()

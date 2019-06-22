@@ -35,10 +35,18 @@ class ReservationCell: UITableViewCell, ReservationCellView{
         self.salonName.text = salonName
     }
     func showDateTime(dateTime:String){
-        self.timeOrTurnLabel.text = dateTime
+        print("\(Int(Double(dateTime)!))")
+        self.timeOrTurnLabel.text = convertMillToDate(time: Int(Double(dateTime)!))
     }
     func showBarberName(name:String){
         self.serviceName.text = name
+    }
+    func convertMillToDate(time:Int) -> String
+    {
+        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(time)/1000)
+        var dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.string(from: dateVar)
     }
 
 }
