@@ -21,7 +21,13 @@ class UserInteractor {
             let result = response.result
             switch result {
             case .success(let user):
-                completionHandler(user, nil)
+                if let statusCode = response.response?.statusCode {
+                    if statusCode == 404 {
+                        completionHandler(nil, nil)
+                    } else {
+                        completionHandler(user, nil)
+                    }
+                }
             case .failure(let error):
                 completionHandler(nil, error)
             }
