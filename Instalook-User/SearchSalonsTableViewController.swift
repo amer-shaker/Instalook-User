@@ -49,6 +49,7 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
         let searchBar = UISearchBar(frame: CGRect(x: 0,y: 0, width:(UIScreen.main.bounds.width), height: 70))
         searchBar.showsScopeBar = true
         searchBar.scopeButtonTitles =  ["Name", "location"]
+        searchBar.barStyle = UIBarStyle.black
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
         self.tableView.tableHeaderView = searchBar
