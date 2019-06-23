@@ -26,7 +26,8 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
         
         barberTV = self.storyboard?.instantiateViewController(withIdentifier: "barbertableview") as! SalonBarbersTableViewController;
         salonServiceTV = self.storyboard?.instantiateViewController(withIdentifier: "servicetableview") as! SalonServicesTableViewController
-        salonProfilePresenter = SalonProfilePresenter(salonView: self,barberTV: barberTV,salonServiceTV: salonServiceTV, salon: salon!)
+        var bookingViewController:BookingViewController =  self.storyboard?.instantiateViewController(withIdentifier: "bookingview") as! BookingViewController
+        salonProfilePresenter = SalonProfilePresenter(salonView: self,barberTV: barberTV,salonServiceTV: salonServiceTV,bookingView: bookingViewController, salon: salon!)
         salonProfilePresenter.showSalonData()
 
       //  barberTV.barbers = salonProfilePresenter.barbers
@@ -91,6 +92,10 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
     
     
     @IBAction func makeReservation(_ sender: Any) {
+        
+        
+        salonProfilePresenter.goToBookingView(salonProfileViewController: self)
+        
     }
 
     /*

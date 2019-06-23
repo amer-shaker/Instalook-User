@@ -13,17 +13,19 @@ class SalonProfilePresenter {
     var searchInteractor:SearchInteractor!
     var barberTV:SalonBarbersTableViewController!
     var salonServiceTV:SalonServicesTableViewController!
+    var bookingView:BookingViewController!
     //will assign by delegation
     var salon:Salon!
     // will assign by web service
     var barbers:[Barber]!
     var salonServices:[SalonService]!
-    init(salonView:SalonProfileView,barberTV:SalonBarbersTableViewController,salonServiceTV:SalonServicesTableViewController,salon:Salon)
+    init(salonView:SalonProfileView,barberTV:SalonBarbersTableViewController,salonServiceTV:SalonServicesTableViewController,bookingView:BookingViewController,salon:Salon)
     {
         self.salonProfileVew = salonView
         self.salon = salon
         self.barberTV = barberTV
         self.salonServiceTV = salonServiceTV
+        self.bookingView = bookingView
         searchInteractor = SearchInteractor()
         getBarbers()
         getSalonServices()
@@ -41,6 +43,7 @@ class SalonProfilePresenter {
             {
                 self?.barberTV.barbers = barbers!
                 self?.salonProfileVew.reloadData()
+                self?.bookingView.barbers = barbers!
                // self?.barberTV.stopAnimating()
                 
             }
@@ -61,6 +64,8 @@ class SalonProfilePresenter {
             {
                 self?.salonServiceTV.salonServices = salonServices!
                 self?.salonProfileVew.reloadData()
+                self?.bookingView.salonServices = salonServices!
+
                // self?.salonServiceTV.stopAnimating()
             }
             else{
@@ -71,6 +76,11 @@ class SalonProfilePresenter {
             
         }
         
+    }
+    func goToBookingView(salonProfileViewController:SalonProfileViewController)
+    {
+        
+        salonProfileViewController.navigationController?.pushViewController(bookingView, animated: true)
     }
     
 }

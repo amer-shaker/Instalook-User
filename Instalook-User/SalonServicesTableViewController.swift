@@ -10,6 +10,8 @@ import UIKit
 
 class SalonServicesTableViewController: UITableViewController {
     var salonServices = [SalonService]()
+    var flage:Int = 0
+    var bookingviewDeleget:BookingViewDeleget!
 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -69,6 +71,14 @@ class SalonServicesTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if flage != 0 {
+            bookingviewDeleget.showServiceName(name: salonServices[indexPath.row].serviceName!)
+            bookingviewDeleget.getIndexOfSalonService(index: indexPath.row)
+            self.navigationController?.popViewController(animated: false)
+        }
     }
  
 

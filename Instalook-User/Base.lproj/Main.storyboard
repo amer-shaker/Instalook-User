@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="2609" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--Booking View Controller-->
         <scene sceneID="hOa-cZ-1da">
             <objects>
-                <viewController id="GB7-vq-sFy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="bookingview" id="GB7-vq-sFy" customClass="BookingViewController" customModule="Instalook_User" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OVL-iS-Iez"/>
                         <viewControllerLayoutGuide type="bottom" id="RwU-Uh-o8R"/>
@@ -103,68 +103,90 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVd-I2-PPY">
-                                <rect key="frame" x="24" y="56" width="327" height="21"/>
+                                <rect key="frame" x="24" y="100" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-Ya-mm4">
-                                <rect key="frame" x="24" y="85" width="327" height="30"/>
+                                <rect key="frame" x="24" y="129" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2m-FF-tag">
-                                <rect key="frame" x="24" y="152" width="327" height="30"/>
+                                <rect key="frame" x="24" y="196" width="327" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Choose Barber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-dR-2FN">
-                                <rect key="frame" x="24" y="190" width="327" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.02400047751" green="0.47878605769999999" blue="0.01723825499" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Choose Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzZ-Te-4yk">
-                                <rect key="frame" x="24" y="219" width="327" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.02400047751" green="0.47878605769999999" blue="0.01723825499" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBh-c9-oB7">
-                                <rect key="frame" x="24" y="123" width="327" height="21"/>
+                                <rect key="frame" x="24" y="167" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJL-J0-KdK">
+                                <rect key="frame" x="24" y="262" width="103" height="28"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                <state key="normal" title="+ Choose Barber">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseBarber:" destination="GB7-vq-sFy" eventType="touchUpInside" id="jbE-Nl-7W8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-h6-0sh">
+                                <rect key="frame" x="24" y="298" width="107" height="28"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                <state key="normal" title="+ Choose Service">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseService:" destination="GB7-vq-sFy" eventType="touchUpInside" id="Le4-7g-AYR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsv-gG-dTc">
+                                <rect key="frame" x="24" y="362" width="327" height="30"/>
+                                <state key="normal" title="Book"/>
+                                <connections>
+                                    <action selector="makeReservation:" destination="GB7-vq-sFy" eventType="touchUpInside" id="jGn-ac-wIl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9M7-h6-0sh" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="07h-4M-hB1"/>
                             <constraint firstItem="qVd-I2-PPY" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="51r-NJ-h1R"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="j2B-dR-2FN" secondAttribute="trailing" constant="8" id="5jo-B3-MhD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h2m-FF-tag" secondAttribute="trailing" constant="8" id="CTA-Ot-fRo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uBh-c9-oB7" secondAttribute="trailing" constant="8" id="Fk9-cz-yRd"/>
                             <constraint firstItem="yiz-Ya-mm4" firstAttribute="top" secondItem="qVd-I2-PPY" secondAttribute="bottom" constant="8" id="Jf8-oZ-jwM"/>
-                            <constraint firstItem="qVd-I2-PPY" firstAttribute="top" secondItem="OVL-iS-Iez" secondAttribute="bottom" constant="36" id="K8w-R3-wGl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LzZ-Te-4yk" secondAttribute="trailing" constant="8" id="OCY-kM-tUn"/>
-                            <constraint firstItem="LzZ-Te-4yk" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="P5d-Wm-WKe"/>
+                            <constraint firstItem="qVd-I2-PPY" firstAttribute="top" secondItem="OVL-iS-Iez" secondAttribute="bottom" constant="80" id="K8w-R3-wGl"/>
+                            <constraint firstItem="gJL-J0-KdK" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="MhX-EK-p2x"/>
                             <constraint firstItem="h2m-FF-tag" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="Pvs-gx-rD5"/>
                             <constraint firstItem="uBh-c9-oB7" firstAttribute="top" secondItem="yiz-Ya-mm4" secondAttribute="bottom" constant="8" id="Qm9-GA-JvJ"/>
-                            <constraint firstItem="LzZ-Te-4yk" firstAttribute="top" secondItem="j2B-dR-2FN" secondAttribute="bottom" constant="8" id="YMx-Em-tKb"/>
-                            <constraint firstItem="j2B-dR-2FN" firstAttribute="top" secondItem="h2m-FF-tag" secondAttribute="bottom" constant="8" id="ZYK-0p-0jX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dsv-gG-dTc" secondAttribute="trailing" constant="8" id="b0p-Uu-toJ"/>
+                            <constraint firstItem="gJL-J0-KdK" firstAttribute="top" secondItem="h2m-FF-tag" secondAttribute="bottom" constant="36" id="fBw-MO-er2"/>
+                            <constraint firstItem="dsv-gG-dTc" firstAttribute="top" secondItem="9M7-h6-0sh" secondAttribute="bottom" constant="36" id="fPY-3o-RVN"/>
+                            <constraint firstItem="9M7-h6-0sh" firstAttribute="top" secondItem="gJL-J0-KdK" secondAttribute="bottom" constant="8" id="gOl-eh-p6Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qVd-I2-PPY" secondAttribute="trailing" constant="8" id="gRV-zJ-Oq7"/>
                             <constraint firstItem="uBh-c9-oB7" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="iQX-8l-s8z"/>
+                            <constraint firstItem="dsv-gG-dTc" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="kw6-hE-2Vn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yiz-Ya-mm4" secondAttribute="trailing" constant="8" id="l9V-5l-6Vs"/>
                             <constraint firstItem="yiz-Ya-mm4" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="mFV-bk-119"/>
                             <constraint firstItem="h2m-FF-tag" firstAttribute="top" secondItem="uBh-c9-oB7" secondAttribute="bottom" constant="8" id="pnD-XO-uSE"/>
-                            <constraint firstItem="j2B-dR-2FN" firstAttribute="leading" secondItem="SFe-fo-41S" secondAttribute="leadingMargin" constant="8" id="uHS-b8-bIC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="barberName" destination="gJL-J0-KdK" id="xqS-B9-BXJ"/>
+                        <outlet property="datePickerTF" destination="yiz-Ya-mm4" id="D9J-Qq-yzn"/>
+                        <outlet property="serviceName" destination="9M7-h6-0sh" id="oVD-Tb-Nix"/>
+                        <outlet property="timePickerTF" destination="h2m-FF-tag" id="2j2-9C-Uge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLw-kp-oCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3079" y="-572"/>
+            <point key="canvasLocation" x="3077.5999999999999" y="-572.56371814092961"/>
         </scene>
         <!--Salon Profile View Controller-->
         <scene sceneID="Z0d-pt-rvv">

@@ -36,7 +36,7 @@ enum InstalookRouter: URLRequestConvertible {
         case .cancelReservation:
             return NetworkingConstants.cancelBooking
         case .book:
-            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.book
+            return NetworkingConstants.bookingRequestMapping + "/" + NetworkingConstants.book
         case .salonRate:
             return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalonRate
         case .updateUserProfile:
@@ -66,7 +66,7 @@ enum InstalookRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-        case .register,.updateUserProfile:
+        case .register,.updateUserProfile,.book:
             httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
             httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
@@ -143,7 +143,7 @@ enum InstalookRouter: URLRequestConvertible {
         switch self {
         case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate, .getBarbers, .getSalonServices:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
-        case .register,.updateUserProfile:
+        case .register,.updateUserProfile,.book:
             return try JSONEncoding.default.encode(urlRequest, with: body)
         }
     }

@@ -10,6 +10,8 @@ import UIKit
 
 class SalonBarbersTableViewController: UITableViewController {
     var barbers = [Barber]()
+    var flage:Int = 0
+    var bookingviewDeleget:BookingViewDeleget!
 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
@@ -75,6 +77,14 @@ class SalonBarbersTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if flage != 0 {
+            bookingviewDeleget.showBarberName(name: barbers[indexPath.row].firstName! + " " + barbers[indexPath.row].lastName!)
+            bookingviewDeleget.getIndexOfBarber(index: indexPath.row)
+            
+            self.navigationController?.popViewController(animated: false)
+        }
     }
     
 

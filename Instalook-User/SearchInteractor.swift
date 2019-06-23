@@ -112,7 +112,48 @@ class SearchInteractor {
         
     }
     
-    func makeReservation(userId:Int,barberId:Int,date:String, completionHandler: @escaping(_ rate: [Barber]?, _ error: String?) -> Void){
+    func makeReservation(userId:Int,barberId:Int,date:String,completionHandler: @escaping (Error?) -> Void)
+    {
+        Alamofire.request(InstalookRouter.book(userId: userId, barberId: barberId, date: date)).responseJSON { (response:DataResponse<Any>) in
+            
+            if let response = response.data {
+                print("Response Data Booking: \(response)")
+            } else {
+                print("Response Data Booking : nil")
+            }
+            
+            if let request = response.request {
+                print("Response Request Booking: \(request)")
+                print("Response Request HTTP method Booking: \(request.httpMethod!)")
+                
+                if let header = request.value(forHTTPHeaderField: NetworkingConstants.contentType) {
+                    print("Response Request HTTP Booking method: \(header)")
+                }
+            } else {
+                print("Response Request Booking: nil")
+            }
+            
+            if let responseStatusCode = response.response {
+                print("Response Status Code Booking: \(responseStatusCode.statusCode)")
+            } else {
+                print("Response Status Code: nil")
+            }
+            
+            if let error = response.error {
+                print("Response Error Code Booking: \(error.localizedDescription)")
+            } else {
+                print("Response Error Code Booking: nil")
+            }
+            
+            let result = response.result
+            switch result {
+            case .success:
+                completionHandler(nil)
+            case .failure(let error):
+                completionHandler(error)
+            }
+            
+        }
         
     }
     func getSalonBarbers(salonId:Int, completionHandler: @escaping(_ barbers: [Barber]?, _ error: String?) -> Void){
