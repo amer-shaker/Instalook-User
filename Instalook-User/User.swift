@@ -30,7 +30,7 @@ class User: NSObject, NSCoding, Mappable {
     }
 
     required convenience init(coder aDecoder: NSCoder) {
-        let userId = aDecoder.decodeInteger(forKey: "userId")
+        let userId = aDecoder.decodeObject(forKey: "userId") as! Int?
         let firstName = aDecoder.decodeObject(forKey: "firstName") as! String?
         let lastName = aDecoder.decodeObject(forKey: "lastName") as! String?
         let email = aDecoder.decodeObject(forKey: "email") as! String?

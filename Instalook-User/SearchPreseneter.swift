@@ -36,6 +36,12 @@ class SearchPreseneter {
             }
         }
     }
+    // go to salon profile
+    func goToSalonProfile(searchView:SearchSalonsTableViewController,salonProfile:SalonProfileViewController,salonIndex:Int){
+        salonProfile.salon = salons[salonIndex]
+        //searchView.present(salonProfile, animated: true, completion: nil)
+       searchView.navigationController?.pushViewController(salonProfile, animated: true)
+    }
     
     func getRate(salonId: Int){
         interactor.getRate(salonId: salonId, completionHandler: { (rate, error) in

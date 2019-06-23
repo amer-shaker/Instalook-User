@@ -12,10 +12,12 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
     private var searchController = UISearchController()
     private var resultsController = UITableViewController()
     let activityView = UIActivityIndicatorView()
+    var salonProfileView:SalonProfileViewController!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         salonProfileView = self.storyboard?.instantiateViewController(withIdentifier: "salonprofiletableview") as! SalonProfileViewController
         
         presenter = SearchPreseneter(view: self)
         presenter.getSalons()
@@ -93,6 +95,12 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
         //configure cell
         presenter.configureCell(cell: cell, index: indexPath.row)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.goToSalonProfile(searchView: self, salonProfile: salonProfileView, salonIndex: indexPath.row)
+        
+        
     }
     
 }
