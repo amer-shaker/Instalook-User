@@ -17,8 +17,10 @@ enum InstalookRouter: URLRequestConvertible {
     case salonRate(salonId: Int)
     case allUserReservation(userId:Int)
     case cancelReservation(reservationId:Int)
-    case book(booking:Booking)
+    case book(userId:Int,barberId:Int,date:String)
     case updateUserProfile(user:User,location:String)
+    case getBarbers(salonId:Int)
+    case getSalonServices(salonId:Int)
     
     var path: String {
         
@@ -34,11 +36,15 @@ enum InstalookRouter: URLRequestConvertible {
         case .cancelReservation:
             return NetworkingConstants.cancelBooking
         case .book:
-            return NetworkingConstants.book
+            return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.book
         case .salonRate:
             return NetworkingConstants.salonRequestMapping + "/" + NetworkingConstants.getSalonRate
         case .updateUserProfile:
             return NetworkingConstants.userRequestMapping + "/" + NetworkingConstants.update
+        case .getBarbers:
+            return NetworkingConstants.barberRequestMapping + "/" + NetworkingConstants.getBarbers
+        case .getSalonServices:
+            return NetworkingConstants.salonServiceRequestMapping + "/" + NetworkingConstants.getSalonServices
         }
     }
     
@@ -47,7 +53,8 @@ enum InstalookRouter: URLRequestConvertible {
         switch self {
         case .login, .register, .book:
             return .post
-        case .search, .allUserReservation, .cancelReservation, .salonRate:
+        case .search, .allUserReservation, .cancelReservation, .salonRate, .getBarbers,
+             .getSalonServices:
             return .get
         case .updateUserProfile:
             return .patch
@@ -86,12 +93,12 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
             body[NetworkingConstants.location] = location
-        case let .book(Booking):
-            body["userId"] = Booking.userId!
-            body["barberId"] = Booking.barberId!
-            body["date"] = Booking.date!
+        case let .book(userId,barberId,date):
+            body["userId"] = userId
+            body["barberId"] = barberId
+            body["date"] = date
             
-            print("Request Body:\nuser id : \(Booking.userId!)\nbarber id : \(Booking.barberId!)\n booking date: \(Booking.date!)")
+            print("Request Body:\nuser id : \(userId)\nbarber id : \(barberId)\n booking date: \(date)")
         default:
             print("Empty request body")
         }
@@ -113,6 +120,11 @@ enum InstalookRouter: URLRequestConvertible {
             params["bookingId"] = reservationId
         case let .salonRate(salonId):
             params[NetworkingConstants.salonId] = salonId
+        case let .getBarbers(salonId):
+            params["salonId"] = salonId
+        case let .getSalonServices(salonId):
+            params["salonId"] = salonId
+            
         default:
             print("Empty request params")
         }
@@ -129,7 +141,7 @@ enum InstalookRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate:
+        case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate, .getBarbers, .getSalonServices:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
         case .register,.updateUserProfile:
             return try JSONEncoding.default.encode(urlRequest, with: body)

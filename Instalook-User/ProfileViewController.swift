@@ -17,6 +17,13 @@ class ProfileViewController: UIViewController,ProfileView {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var numberOfSavedPostLabel: UILabel!
+    @IBOutlet weak var numberOfFollowingsLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    var profilePresenter:ProfilePresenter!
+    var reservatinTV:ReservationsTVController!
+    var pointTV: PointsTVController!
+    var followTV: FollowedSalonsTV!
+    var savedPostTV:SavedPostsTVController!
     
     @IBAction func goToEditingProfile(_ sender: Any) {
         let storyboard = UIStoryboard(name: "UserProfileScenario", bundle: Bundle.main)
@@ -26,13 +33,6 @@ class ProfileViewController: UIViewController,ProfileView {
         
         
     }
-    @IBOutlet weak var numberOfFollowingsLabel: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
-    var profilePresenter:ProfilePresenter!
-    var reservatinTV:ReservationsTVController!
-    var pointTV: PointsTVController!
-    var followTV: FollowedSalonsTV!
-    var savedPostTV:SavedPostsTVController!
     
        override func viewDidLoad() {
         super.viewDidLoad()

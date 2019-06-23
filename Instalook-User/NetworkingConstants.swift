@@ -20,6 +20,8 @@ struct NetworkingConstants {
     // Request Mappings
     static let userRequestMapping = "user"
     static let salonRequestMapping = "salon"
+    static let barberRequestMapping = "barber"
+    static let salonServiceRequestMapping = "service"
     
     
     // User Requests
@@ -46,4 +48,9 @@ struct NetworkingConstants {
     static let getUserBookings = "getBookings"
     static let book = "book"
     static let cancelBooking = "cancelBooking"
+    
+    // barbers
+    static let getBarbers = "all"
+    // salon services
+    static let getSalonServices = "all"
 }
