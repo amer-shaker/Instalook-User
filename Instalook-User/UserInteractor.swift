@@ -25,7 +25,7 @@ class UserInteractor {
                     if statusCode == 404 {
                         completionHandler(nil, nil)
                     } else {
-                        completionHandler(user, nil)
+                        completionHandler(salon, nil)
                     }
                 }
             case .failure(let error):
@@ -48,40 +48,10 @@ class UserInteractor {
             }
         }
     }
-    func update(user: User,location:String,
-                completionHandler: @escaping (Error?) -> Void)
-    {
+    
+    func update(user: User, location:String,
+                completionHandler: @escaping (Error?) -> Void) {
         Alamofire.request(InstalookRouter.updateUserProfile(user: user, location: location)).responseJSON { (response:DataResponse<Any>) in
-            
-            if let response = response.data {
-                print("Response Data User: \(response)")
-            } else {
-                print("Response Data User : nil")
-            }
-            
-            if let request = response.request {
-                print("Response Request User: \(request)")
-                print("Response Request HTTP method User: \(request.httpMethod!)")
-                
-                if let header = request.value(forHTTPHeaderField: NetworkingConstants.contentType) {
-                    print("Response Request HTTP USer method: \(header)")
-                }
-            } else {
-                print("Response Request USer: nil")
-            }
-            
-            if let responseStatusCode = response.response {
-                print("Response Status Code User: \(responseStatusCode.statusCode)")
-            } else {
-                print("Response Status Code: nil")
-            }
-            
-            if let error = response.error {
-                print("Response Error Code reservation: \(error.localizedDescription)")
-            } else {
-                print("Response Error Code reservation: nil")
-            }
-            
             let result = response.result
             switch result {
             case .success:
@@ -89,8 +59,6 @@ class UserInteractor {
             case .failure(let error):
                 completionHandler(error)
             }
-        
         }
-        
     }
 }
