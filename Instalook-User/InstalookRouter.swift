@@ -66,7 +66,7 @@ enum InstalookRouter: URLRequestConvertible {
         var httpHeaders = [String:String]()
         
         switch self {
-        case .register,.updateUserProfile,.book:
+        case .register,.updateUserProfile, .book:
             httpHeaders[NetworkingConstants.accept] = NetworkingConstants.contentTypeJSON
             httpHeaders[NetworkingConstants.contentType] = NetworkingConstants.contentTypeJSON
         default:
@@ -86,7 +86,7 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.lastName] = user.lastName!
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
-        case let .updateUserProfile(user,location):
+        case let .updateUserProfile(user, location):
             body[NetworkingConstants.userId] = user.userId!
             body[NetworkingConstants.firstName] = user.firstName!
             body[NetworkingConstants.lastName] = user.lastName!
@@ -94,11 +94,9 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.password] = user.password!
             body[NetworkingConstants.location] = location
         case let .book(booking):
-            body["userId"] = booking.userId
-            body["barberId"] = booking.barberId
-            body["date"] = booking.date
-            
-            //print("Request Body:\nuser id : \(userId)\nbarber id : \(barberId)\n booking date: \(date)")
+            body["userId"] = booking.userId!
+            body["barberId"] = booking.barberId!
+            body["date"] = booking.date!
         default:
             print("Empty request body")
         }
@@ -141,9 +139,9 @@ enum InstalookRouter: URLRequestConvertible {
         urlRequest.allHTTPHeaderFields = httpHeaders
         
         switch self {
-        case .login, .search,.allUserReservation, .cancelReservation, .book, .salonRate, .getBarbers, .getSalonServices:
+        case .login, .search,.allUserReservation, .cancelReservation, .salonRate, .getBarbers, .getSalonServices:
             return try URLEncoding.methodDependent.encode(urlRequest, with: params)
-        case .register,.updateUserProfile,.book:
+        case .register,.updateUserProfile, .book:
             return try JSONEncoding.default.encode(urlRequest, with: body)
         }
     }

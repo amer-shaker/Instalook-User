@@ -112,13 +112,17 @@ class SearchInteractor {
         
     }
     
-    func makeReservation(userId:Int,barberId:Int,date:String,completionHandler: @escaping (Error?) -> Void)
-    {
-        var booking = Booking()
+    func makeReservation(userId: Int,
+                         barberId: Int,
+                         date: String,
+                         completionHandler: @escaping (Error?) -> Void) {
+        let booking = Booking()
         booking.barberId = barberId
         booking.userId = userId
         booking.date = date
-        Alamofire.request(InstalookRouter.book(booking: booking)).responseString { (response:DataResponse<String>) in
+        
+        Alamofire.request(InstalookRouter.book(booking: booking)).responseJSON {
+            (response: DataResponse<Any>) in
             
             if let response = response.data{
                 print("Response Data Booking: \(response)")
@@ -160,6 +164,8 @@ class SearchInteractor {
         }
         
     }
+    
+    
     func getSalonBarbers(salonId:Int, completionHandler: @escaping(_ barbers: [Barber]?, _ error: String?) -> Void){
         Alamofire.request(InstalookRouter.getBarbers(salonId: salonId))
             .responseArray {(response: DataResponse<[Barber]>) in

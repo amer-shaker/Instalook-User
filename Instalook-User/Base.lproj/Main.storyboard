@@ -245,9 +245,8 @@
                                     <action selector="swichView:" destination="JRj-S1-01q" eventType="valueChanged" id="CJw-Sw-DhC"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a2-8D-SDC">
-                                <rect key="frame" x="-4" y="238" width="383" height="429"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8a2-8D-SDC">
+                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -257,13 +256,17 @@
                             <constraint firstItem="5S1-YR-Dni" firstAttribute="leading" secondItem="fIX-d1-C4j" secondAttribute="leading" id="302-ph-zog"/>
                             <constraint firstItem="YIr-Ce-1Ej" firstAttribute="leading" secondItem="uwc-Fn-AYh" secondAttribute="leading" id="8vH-85-EiY"/>
                             <constraint firstItem="5S1-YR-Dni" firstAttribute="top" secondItem="fIX-d1-C4j" secondAttribute="bottom" constant="8" id="AbR-bY-iRb"/>
+                            <constraint firstItem="8a2-8D-SDC" firstAttribute="leading" secondItem="c01-h2-z2w" secondAttribute="leading" id="RSd-NJ-v42"/>
                             <constraint firstItem="YIr-Ce-1Ej" firstAttribute="top" secondItem="uwc-Fn-AYh" secondAttribute="bottom" constant="8" id="XoE-lW-uT0"/>
                             <constraint firstItem="fIX-d1-C4j" firstAttribute="leading" secondItem="DXY-zZ-JRc" secondAttribute="trailing" constant="16" id="b4n-hU-YRZ"/>
                             <constraint firstItem="fIX-d1-C4j" firstAttribute="top" secondItem="mpc-Wo-quA" secondAttribute="bottom" constant="16" id="ceA-2F-Qcc"/>
                             <constraint firstItem="uwc-Fn-AYh" firstAttribute="top" secondItem="5S1-YR-Dni" secondAttribute="bottom" constant="8" id="ge0-HF-eq3"/>
                             <constraint firstItem="DXY-zZ-JRc" firstAttribute="leading" secondItem="c01-h2-z2w" secondAttribute="leadingMargin" constant="16" id="gxf-Cl-Nwf"/>
+                            <constraint firstItem="8C5-zm-m9G" firstAttribute="top" secondItem="8a2-8D-SDC" secondAttribute="bottom" id="kba-GL-TUd"/>
                             <constraint firstItem="1JG-7e-Ofj" firstAttribute="centerX" secondItem="c01-h2-z2w" secondAttribute="centerX" id="r94-Uc-EpG"/>
                             <constraint firstItem="DXY-zZ-JRc" firstAttribute="top" secondItem="mpc-Wo-quA" secondAttribute="bottom" constant="16" id="sma-vz-x9a"/>
+                            <constraint firstAttribute="trailing" secondItem="8a2-8D-SDC" secondAttribute="trailing" id="vEV-sH-aXZ"/>
+                            <constraint firstItem="8a2-8D-SDC" firstAttribute="top" secondItem="1JG-7e-Ofj" secondAttribute="bottom" constant="32" id="y3o-es-pYF"/>
                             <constraint firstItem="uwc-Fn-AYh" firstAttribute="leading" secondItem="5S1-YR-Dni" secondAttribute="leading" id="ys4-dW-kX3"/>
                         </constraints>
                     </view>
@@ -458,12 +461,14 @@
         <!--Navigation Controller-->
         <scene sceneID="Liy-Qe-KQT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BGg-m5-9Vs" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGg-m5-9Vs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="5rx-n2-Kqr"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="llb-pi-vky">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="llb-pi-vky">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

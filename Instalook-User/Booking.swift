@@ -29,7 +29,6 @@ class Booking: Mappable {
         userId <- map["userId"]
         barberId <- map["barberId"]
         date <- map["date"]
-        
     }
 }
 
