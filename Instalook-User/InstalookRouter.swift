@@ -17,7 +17,7 @@ enum InstalookRouter: URLRequestConvertible {
     case salonRate(salonId: Int)
     case allUserReservation(userId:Int)
     case cancelReservation(reservationId:Int)
-    case book(userId:Int,barberId:Int,date:String)
+    case book(booking:Booking)
     case updateUserProfile(user:User,location:String)
     case getBarbers(salonId:Int)
     case getSalonServices(salonId:Int)
@@ -93,12 +93,12 @@ enum InstalookRouter: URLRequestConvertible {
             body[NetworkingConstants.email] = user.email!
             body[NetworkingConstants.password] = user.password!
             body[NetworkingConstants.location] = location
-        case let .book(userId,barberId,date):
-            body["userId"] = userId
-            body["barberId"] = barberId
-            body["date"] = date
+        case let .book(booking):
+            body["userId"] = booking.userId
+            body["barberId"] = booking.barberId
+            body["date"] = booking.date
             
-            print("Request Body:\nuser id : \(userId)\nbarber id : \(barberId)\n booking date: \(date)")
+            //print("Request Body:\nuser id : \(userId)\nbarber id : \(barberId)\n booking date: \(date)")
         default:
             print("Empty request body")
         }

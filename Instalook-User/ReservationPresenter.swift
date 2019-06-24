@@ -27,7 +27,7 @@ class ReservationPresenter
     
      
     }
-    public func getAllUserReservations()    {
+    public func getAllUserReservations(){
         reservationView.showIndicator()
         self.reservationInteractor.getAllUserReservations(userId: user.userId!){ [weak self] (reservations) in
             if reservations != nil {
