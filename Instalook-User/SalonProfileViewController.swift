@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class SalonProfileViewController: UIViewController, SalonProfileView {
 
@@ -15,19 +16,25 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
     @IBOutlet weak var SalonNameLabel: UILabel!
     @IBOutlet weak var SalonAddressLabel: UILabel!
     @IBOutlet weak var viewSwiching: UIView!
+    @IBOutlet weak var salonRatingView: CosmosView!
+    
     var salonProfilePresenter:SalonProfilePresenter!
     var salonIndex:Int!
     var barberTV: SalonBarbersTableViewController!
     var salonServiceTV: SalonServicesTableViewController!
     var salon:Salon!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        salonRatingView.isUserInteractionEnabled = false
+
         barberTV = self.storyboard?.instantiateViewController(withIdentifier: "barbertableview") as! SalonBarbersTableViewController;
         salonServiceTV = self.storyboard?.instantiateViewController(withIdentifier: "servicetableview") as! SalonServicesTableViewController
-        var bookingViewController:BookingViewController =  self.storyboard?.instantiateViewController(withIdentifier: "bookingview") as! BookingViewController
+        
+        let bookingViewController:BookingViewController =  self.storyboard?.instantiateViewController(withIdentifier: "bookingview") as! BookingViewController
+        
         salonProfilePresenter = SalonProfilePresenter(salonView: self,barberTV: barberTV,salonServiceTV: salonServiceTV,bookingView: bookingViewController, salon: salon!)
+        
         salonProfilePresenter.showSalonData()
 
       //  barberTV.barbers = salonProfilePresenter.barbers
@@ -36,8 +43,6 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
         
         viewSwiching.addSubview(salonServiceTV.view)
         viewSwiching.addSubview(barberTV.view)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,11 +67,9 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
         switch sender.selectedSegmentIndex {
         case 0:
             viewSwiching.bringSubview(toFront: barberTV.view)
-            print("barbers view")
             break
         case 1:
-            viewSwiching.bringSubview(toFront:salonServiceTV.view)
-            print("services view")
+            viewSwiching.bringSubview(toFront: salonServiceTV.view)
         default:
             viewSwiching.bringSubview(toFront: barberTV.view)
             

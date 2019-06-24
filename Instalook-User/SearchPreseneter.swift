@@ -36,12 +36,6 @@ class SearchPreseneter {
             }
         }
     }
-    // go to salon profile
-    func goToSalonProfile(searchView:SearchSalonsTableViewController,salonProfile:SalonProfileViewController,salonIndex:Int){
-        salonProfile.salon = salons[salonIndex]
-        //searchView.present(salonProfile, animated: true, completion: nil)
-       searchView.navigationController?.pushViewController(salonProfile, animated: true)
-    }
     
     func getRate(salonId: Int){
         interactor.getRate(salonId: salonId, completionHandler: { (rate, error) in
@@ -52,9 +46,28 @@ class SearchPreseneter {
             }else {
                 self.view?.showError(error: error)
             }
-            
         })
     }
+    
+    func getClickedSalon(index: Int){
+         let salon = salons[index]
+         view?.getClickedSalon(salon: salon)
+    }
+    
+    // go to salon profile
+//    func goToSalonProfile(searchView: SearchSalonsTableViewController, salonProfile: SalonProfileViewController, salonIndex:Int){
+//        
+//        /*salonProfile.salon = salons[salonIndex]
+//
+//        if let index = salons.index(of: barber) {
+//        }*/
+//        
+//        print(salonProfile.salon.salonID!)
+//        //searchView.present(salonProfile, animated: true, completion: nil)
+//        searchView.navigationController?.pushViewController(salonProfile, animated: true)
+//    }
+    
+  
     
     
     // MARK: - cell configuration
@@ -84,7 +97,5 @@ class SearchPreseneter {
         self.view?.reloadData()
     }
     
-    //    private func calculateRate(points: [Point]) -> Int{
-    //        return 2
-    //    }
+
 }

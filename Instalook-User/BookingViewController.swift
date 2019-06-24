@@ -165,8 +165,8 @@ class BookingViewController: UIViewController, BookingViewDeleget {
                 print("user id :\(self.user.userId!)")
                 print("barber id :\(self.barber.barberId!)")
                 print("date :\(self.datePickerTF.text! + "T" + self.timePickerTF.text!)")
-
-
+                
+                
                 self.bookingPresenter.book(userId: self.user.userId!, barberId: self.barber.barberId!, date: self.datePickerTF.text! + "T" + self.timePickerTF.text!)
                 self.updateViewController()
                 self.navigationController?.popViewController(animated: true)

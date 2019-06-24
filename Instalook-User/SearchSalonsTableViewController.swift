@@ -90,9 +90,9 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.goToSalonProfile(searchView: self, salonProfile: salonProfileView, salonIndex: indexPath.row)
-        
-        
+        print("cell index: \(indexPath)")
+        presenter.getClickedSalon(index: indexPath.row)
+        //presenter.goToSalonProfile(searchView: self, salonProfile: salonProfileView, salonIndex: indexPath.row)
     }
     
 }
@@ -119,6 +119,11 @@ extension SearchSalonsTableViewController: SearchView{
     }
     func reloadData() {
         tableView.reloadData()
+    }
+    func getClickedSalon(salon: Salon) {
+        salonProfileView.salon = salon
+        self.navigationController?.pushViewController(salonProfileView, animated: true)
+        
     }
     
 }

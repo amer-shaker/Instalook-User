@@ -19,7 +19,8 @@ class SalonProfilePresenter {
     // will assign by web service
     var barbers:[Barber]!
     var salonServices:[SalonService]!
-    init(salonView:SalonProfileView,barberTV:SalonBarbersTableViewController,salonServiceTV:SalonServicesTableViewController,bookingView:BookingViewController,salon:Salon)
+    
+    init(salonView: SalonProfileView, barberTV: SalonBarbersTableViewController, salonServiceTV: SalonServicesTableViewController,bookingView:BookingViewController, salon: Salon)
     {
         self.salonProfileVew = salonView
         self.salon = salon
@@ -27,17 +28,18 @@ class SalonProfilePresenter {
         self.salonServiceTV = salonServiceTV
         self.bookingView = bookingView
         searchInteractor = SearchInteractor()
-        getBarbers()
-        getSalonServices()
+        getBarbers(salonId: salon.salonID!)
+        getSalonServices(salonId: salon.salonID!)
     }
     
    func showSalonData(){
     salonProfileVew.showSalonName(name: salon.salonName!)
     salonProfileVew.showSalonAddress(address: salon.salonLocation!)
     }
-    func getBarbers(){
+    
+    func getBarbers(salonId: Int){
        // self.barberTV.startAnimating()
-        searchInteractor.getSalonBarbers(salonId:202){[weak self]
+        searchInteractor.getSalonBarbers(salonId: salonId){[weak self]
             (barbers,error) in
             if barbers != nil
             {
@@ -56,9 +58,9 @@ class SalonProfilePresenter {
        
 
     }
-    func getSalonServices(){
+    func getSalonServices(salonId: Int){
       //  self.salonServiceTV.startAnimating()
-        searchInteractor.getSalonServices(salonId:202){[weak self]
+        searchInteractor.getSalonServices(salonId: salonId){[weak self]
             (salonServices,error) in
             if salonServices != nil
             {

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Salon: Mappable {
+class Salon: NSObject, Mappable {
     
     var salonID: Int?
     var salonName, salonEmail, salonLocation, salonType: String?
@@ -19,7 +19,7 @@ class Salon: Mappable {
     var users: [User]?
     var salonRate: Int?
     
-    init() {
+    override init() {
         
     }
     

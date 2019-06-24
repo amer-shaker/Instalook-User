@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class SalonBarbersTableViewController: UITableViewController {
     var barbers = [Barber]()
@@ -58,8 +59,13 @@ class SalonBarbersTableViewController: UITableViewController {
         
         var barberImageView:UIImageView = cell.viewWithTag(1) as! UIImageView
         var barberNameLabel:UILabel = cell.viewWithTag(2) as! UILabel
-        var isAvailableLumb:UILabel = cell.viewWithTag(3) as! UILabel
-        var isAvailableText:UILabel = cell.viewWithTag(4) as! UILabel
+        var isAvailableLumb:UILabel = cell.viewWithTag(5) as! UILabel
+        var isAvailableText:UILabel = cell.viewWithTag(3) as! UILabel
+        
+        let barberRatingView: CosmosView = cell.viewWithTag(4) as! CosmosView
+        barberRatingView.rating = barbers[indexPath.row].rate!
+        barberRatingView.isUserInteractionEnabled = false
+        
        barberImageView =  Utils.customizeProfileImage(borderImage: 1.0, cornerRedius: barberImageView.frame.height/2,imageView: barberImageView) as! UIImageView
         isAvailableLumb =  Utils.customizeProfileImage(borderImage: 0.0, cornerRedius: isAvailableLumb.frame.height/2,imageView: isAvailableLumb) as! UILabel
         if barbers[indexPath.row].isAvailable == 1 {

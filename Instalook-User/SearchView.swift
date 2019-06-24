@@ -14,4 +14,5 @@ protocol SearchView: class {
     func fetchingDataSuccess()
     func showError(error: String?)
     func reloadData()
+    func getClickedSalon(salon: Salon)
 }

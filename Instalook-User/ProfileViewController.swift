@@ -30,8 +30,6 @@ class ProfileViewController: UIViewController,ProfileView {
         let editingProfileView = storyboard.instantiateViewController(withIdentifier: "EditingProfileController") as! EditingProfileViewController
         self.present(editingProfileView, animated: true, completion: nil)
         editingProfileView.profileView = self
-        
-        
     }
     
        override func viewDidLoad() {
@@ -49,17 +47,31 @@ class ProfileViewController: UIViewController,ProfileView {
         
         print("search view search view search view search view")
         
-       userImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView
+       /*userImage =  Utils.customizeProfileImage(borderImage: 2.0, cornerRedius: userImage.frame.height/2,imageView: userImage) as! UIImageView*/
         // intial of Two View controller
-        reservatinTV = self.storyboard?.instantiateViewController(withIdentifier: "ReservationTVC") as! ReservationsTVController;
-    pointTV = self.storyboard?.instantiateViewController(withIdentifier: "PointsTVController") as! PointsTVController
-        followTV = self.storyboard?.instantiateViewController(withIdentifier: "FollowingTVController") as! FollowedSalonsTV
-        savedPostTV = self.storyboard?.instantiateViewController(withIdentifier: "SavedPostTVController") as! SavedPostsTVController
+        reservatinTV = UIStoryboard(name: "UserProfileScenario", bundle: nil).instantiateViewController(withIdentifier: "ReservationTVC") as! ReservationsTVController
+        
+    pointTV = UIStoryboard(name: "UserProfileScenario", bundle: nil).instantiateViewController(withIdentifier: "PointsTVController") as! PointsTVController
+        followTV = UIStoryboard(name: "UserProfileScenario", bundle: nil).instantiateViewController(withIdentifier: "FollowingTVController") as! FollowedSalonsTV
+        savedPostTV = UIStoryboard(name: "UserProfileScenario", bundle: nil).instantiateViewController(withIdentifier: "SavedPostTVController") as! SavedPostsTVController
         
         
                 //********
         
         // add views to segmentView
+        // add views to segmentView
+        savedPostTV.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(savedPostTV.view)
+        
+        let topConstraint = savedPostTV.view.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: 8)
+        let margins = view.layoutMarginsGuide
+        let leadingConstraint = savedPostTV.view.leadingAnchor.constraint(equalTo: margins.leadingAnchor)
+        let trailingConstraint = savedPostTV.view.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
+        
+        topConstraint.isActive = true
+        leadingConstraint.isActive = true
+        trailingConstraint.isActive = true
+        
         profileView.addSubview(savedPostTV.view)
         profileView.addSubview(pointTV.view)
         profileView.addSubview(followTV.view)
