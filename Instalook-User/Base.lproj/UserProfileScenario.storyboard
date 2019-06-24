@@ -39,25 +39,25 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="225" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6c-30-3H1">
-                                                <rect key="frame" x="134" y="24" width="101" height="24"/>
+                                                <rect key="frame" x="134" y="24" width="100.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="225" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07K-jj-Fb3">
-                                                <rect key="frame" x="251" y="24" width="100" height="24"/>
+                                                <rect key="frame" x="250.5" y="24" width="100.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Posts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-Mx-bgR">
-                                                <rect key="frame" x="134" y="64" width="101" height="17"/>
+                                                <rect key="frame" x="134" y="64" width="100.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-WV-4U0">
-                                                <rect key="frame" x="251" y="64" width="100" height="17"/>
+                                                <rect key="frame" x="250.5" y="64" width="100.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,14 +78,13 @@
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rXf-NW-iha">
                                                 <rect key="frame" x="0.0" y="179" width="375" height="29"/>
-                                                <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <segments>
                                                     <segment title="Reservations"/>
                                                     <segment title="Followings"/>
                                                     <segment title="Points"/>
                                                     <segment title="Posts"/>
                                                 </segments>
-                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="swichProfileUserViews:" destination="hUo-tc-WXB" eventType="valueChanged" id="WMO-v6-u0t"/>
                                                 </connections>
@@ -472,7 +471,7 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9M-3K-jzy">
                                             <rect key="frame" x="145" y="85" width="214" height="33"/>
-                                            <color key="backgroundColor" red="0.052202982850000003" green="0.82129112449999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.54117647059999996" green="0.70588235290000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <state key="normal" title="UNFOLLOW">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

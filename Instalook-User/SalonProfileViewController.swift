@@ -91,11 +91,8 @@ class SalonProfileViewController: UIViewController, SalonProfileView {
    
     
     
-    @IBAction func makeReservation(_ sender: Any) {
-        
-        
+    @IBAction func makeReservation(_ sender: UIButton) {
         salonProfilePresenter.goToBookingView(salonProfileViewController: self)
-        
     }
 
     /*

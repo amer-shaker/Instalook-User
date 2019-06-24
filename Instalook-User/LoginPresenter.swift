@@ -32,9 +32,16 @@ class LoginPresenter {
                 if let error = error {
                     self.view?.showError(error: error.localizedDescription)
                 } else {
-                    guard let user = user else { return }
+                    guard let user = user else {
+                        self.view?.showError(error: "Wrong username or password.")
+                        return
+                    }
+                    
                     self.user = user
                     self.view?.loginSuccess(user: self.user!)
+                    
+                    guard let userId = user.userId else { return }
+                    self.saveUserIdIntoUserDefaults(userId: userId)
                 }
             }
         } else {
@@ -50,4 +57,8 @@ class LoginPresenter {
         return !(password.isEmpty)
     }
     
+    private func saveUserIdIntoUserDefaults(userId: Int) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(userId, forKey: "userId")
+    }
 }

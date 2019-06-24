@@ -9,32 +9,29 @@
 import Foundation
 import ObjectMapper
 
-
-class Barber : NSObject, Mappable {
-    var barberId:Int?
-    var firstName:String?
-    var lastName:String?
-    var role:String?
-    var rate:Int?
-    var barberPicture:String?
-    var isAvailable:Int?
+class Barber: NSObject, Mappable {
     
-    var salonId:Int?
-    override init(){}
+    var barberId: Int?
+    var firstName: String?
+    var lastName: String?
+    var role: String?
+    var rate: Double?
+    var isAvailable: Int?
+    
+    override init() {
+        
+    }
+    
     required init(map: Map) {
         
     }
     
     func mapping(map: Map) {
-        barberId <- map["barberId"]
-        firstName <- map["firstName"]
-        lastName <- map["lastName"]
-        role <- map["role"]
-        rate <- map["rate"]
-        barberPicture <- map["barberPicture"]
-        isAvailable <- map["isAvailable"]
-
-        
+        barberId <- map[NetworkingConstants.barberId]
+        firstName <- map[NetworkingConstants.barberFirstName]
+        lastName <- map[NetworkingConstants.barberLastName]
+        role <- map[NetworkingConstants.barberRole]
+        rate <- map[NetworkingConstants.barberRate]
+        isAvailable <- map[NetworkingConstants.isAvailable]
     }
-    
 }

@@ -25,7 +25,7 @@ class UserInteractor {
                     if statusCode == 404 {
                         completionHandler(nil, nil)
                     } else {
-                        completionHandler(salon, nil)
+                        completionHandler(user, nil)
                     }
                 }
             case .failure(let error):

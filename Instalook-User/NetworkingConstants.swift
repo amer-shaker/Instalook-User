@@ -40,6 +40,14 @@ struct NetworkingConstants {
     static let salonId = "salonId"
     static let location = "location"
     
+    // Barber Query Parameters
+    static let barberId = "barberId"
+    static let barberFirstName = "firstName"
+    static let barberLastName = "lastName"
+    static let barberRole = "role"
+    static let barberRate = "rate"
+    static let isAvailable = "isAvailable"
+    
     // Salon Requests
     static let getSalons = "getSalons"
     static let getSalonsById = "getSalonsById"
@@ -52,6 +60,7 @@ struct NetworkingConstants {
     
     // barbers
     static let getBarbers = "all"
+    
     // salon services
     static let getSalonServices = "all"
 }

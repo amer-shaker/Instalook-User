@@ -75,7 +75,6 @@
 		CCD18B1722BD69EB00DD1E2C /* EditingProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1622BD69EB00DD1E2C /* EditingProfilePresenter.swift */; };
 		CCD18B1922BD6A3600DD1E2C /* EditingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1822BD6A3600DD1E2C /* EditingProfileView.swift */; };
 		CCD18B1B22BE206900DD1E2C /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD18B1A22BE206900DD1E2C /* ProfilePresenter.swift */; };
-		CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */; };
 		D5DBC3C599C247870CF2CA8C /* Pods_Instalook_UserUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214DE4317A4395070C3F3075 /* Pods_Instalook_UserUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -178,7 +177,6 @@
 		CCD18B1622BD69EB00DD1E2C /* EditingProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfilePresenter.swift; sourceTree = "<group>"; };
 		CCD18B1822BD6A3600DD1E2C /* EditingProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditingProfileView.swift; sourceTree = "<group>"; };
 		CCD18B1A22BE206900DD1E2C /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,14 +280,14 @@
 			children = (
 				CCCF48E222A096E30037934D /* User.swift */,
 				CC1DB59F2296DD9C003A08F6 /* Salon.swift */,
+				CC613EBD22BEED080029C05E /* Barber.swift */,
 				CC1CA09022A027C40041FD0F /* Points.swift */,
-				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
 				CCC97DB322A1CC97006FA981 /* Reservation.swift */,
 				CC6588D622B520C800DCDBC9 /* Booking.swift */,
 				CCA9042822BE2245008908AB /* Images.swift */,
 				CCA9042A22BE2269008908AB /* Post.swift */,
 				CC613EBB22BEEAF60029C05E /* SalonService.swift */,
-				CC613EBD22BEED080029C05E /* Barber.swift */,
+				CC83D4832296D9A10035471C /* Instalook_User.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -328,7 +326,6 @@
 				CCC3ED2122BFE17200E2CDDC /* BookingViewController.swift */,
 				CC1DB59D2296DC78003A08F6 /* Presenter */,
 				CC1DB59C2296DC6A003A08F6 /* Interactor */,
-				CCDBDD8E22B68DDC004BD1DE /* HomeViewController.swift */,
 			);
 			name = "Search Salon";
 			sourceTree = "<group>";
@@ -752,7 +749,6 @@
 				CCC3ED2422BFFFEF00E2CDDC /* BookingViewDeleget.swift in Sources */,
 				CCCF48FE22A09AAC0037934D /* SearchCellView.swift in Sources */,
 				CCA9042522BE1BC5008908AB /* SearchInteractor.swift in Sources */,
-				CCDBDD8F22B68DDC004BD1DE /* HomeViewController.swift in Sources */,
 				CCCF48FC22A09A980037934D /* SearchView.swift in Sources */,
 				CC549F0522A1791900B7DD57 /* ReservationPresenter.swift in Sources */,
 				CCCF48F422A098530037934D /* UserInteractor.swift in Sources */,

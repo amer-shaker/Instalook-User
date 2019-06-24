@@ -28,16 +28,9 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
         // Search Configuration
         searchBarSetup()
         
-        // TableView height configuration
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        
         // TableView row height configuration
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 118
-        
     }
     
     func activityIndicatorSetup(){
@@ -47,15 +40,14 @@ class SearchSalonsTableViewController: UITableViewController, UISearchBarDelegat
         self.view.addSubview(activityView)
     }
     
-    func searchBarSetup(){
-        let searchBar = UISearchBar(frame: CGRect(x: 0,y: 0, width:(UIScreen.main.bounds.width), height: 70))
+    func searchBarSetup () {
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width:(UIScreen.main.bounds.width), height: 70))
         searchBar.showsScopeBar = true
-        searchBar.scopeButtonTitles =  ["Name", "location"]
+        searchBar.scopeButtonTitles =  ["Name", "Location"]
         searchBar.barStyle = UIBarStyle.black
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
-        self.tableView.tableHeaderView = searchBar
-        
+        tableView.tableHeaderView = searchBar
     }
     
     // MARK: - search bar delegete
