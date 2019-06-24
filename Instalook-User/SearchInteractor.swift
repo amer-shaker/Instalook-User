@@ -114,9 +114,13 @@ class SearchInteractor {
     
     func makeReservation(userId:Int,barberId:Int,date:String,completionHandler: @escaping (Error?) -> Void)
     {
-        Alamofire.request(InstalookRouter.book(userId: userId, barberId: barberId, date: date)).responseJSON { (response:DataResponse<Any>) in
+        var booking = Booking()
+        booking.barberId = barberId
+        booking.userId = userId
+        booking.date = date
+        Alamofire.request(InstalookRouter.book(booking: booking)).responseString { (response:DataResponse<String>) in
             
-            if let response = response.data {
+            if let response = response.data{
                 print("Response Data Booking: \(response)")
             } else {
                 print("Response Data Booking : nil")
